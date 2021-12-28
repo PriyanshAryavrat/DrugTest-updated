@@ -1,0 +1,88 @@
+.login-form-outer{
+    width:30%;
+}
+
+.login-form h3 {
+    text-align: center;
+    margin: 0 0 10px 0;
+    border-bottom: 1px solid #efeaea;
+    padding-bottom: 10px;
+    font-size: 28px;
+    color: #424e58;
+    font-weight: 600;
+}
+.forgot-link a {
+    float: right;
+    color: #1e9ff2;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+
+.login-form .home-cardbox button {
+    background: linear-gradient(to right, #4eb4f5 0, #0c84d1 100%);
+    border-radius: 10px;
+    color: #fff;
+    font-size: 20px;
+    padding: 6px 20px;
+    transition: all 0.5s ease;
+    display: block;
+    text-align: center;
+    border: 0;
+    width: 100%;
+}
+
+.login-form .home-cardbox button:hover {
+    background: linear-gradient(to right, #0c84d1 0, #4eb4f5 100%);
+}
+.loginbtn a {
+    margin-top: 10px;
+    font-weight: 500;
+    color: #1e9ff2;
+    font-size: 14px;
+}
+.m8 {
+    margin-bottom: 8px;
+}
+.loginsign {
+    text-align: center;
+    margin-top: 11px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #797979;
+}
+.loginsign p{
+    margin-bottom: 0;
+}
+.loginsign a{
+
+    color: #1e9ff2;
+}
+
+
+/* Responsive Css */
+@media screen and (max-width:1200px){
+    .login-form-outer {
+        width: 60%;
+    }
+    .login-form-outer {
+        width: 50%;
+        transform: none;
+        left: 0;
+        right: 0;
+        margin: auto;
+        margin: 10% auto;
+        position: relative;
+        overflow: inherit;
+    }
+}
+@media screen and (max-width:767px){
+    .login-form-outer {
+        width: 90%;
+    }
+}
+@media screen and (max-width:400px){
+    .login-form-outer {
+        width: 100%;
+    }
+}

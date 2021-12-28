@@ -1,0 +1,265 @@
+.page-body-wrapper {
+    min-height: calc(100vh - 70px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.navbar-brand-wrapper .navbar-brand {
+    color: #fff;
+    font-size: 21px;
+    line-height: 21px;
+    margin-right: 0;
+    padding: 15px 0;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.navbar-brand-wrapper .navbar-brand.brand-logo-mini, .navbar-toggler-right, .sidebar-icon-only .navbar-brand.brand-logo, .sidebar-icon-only .sidebar .nav .nav-item .nav-link .menu-title {
+    display: none;
+}
+
+.navbar-brand-wrapper .navbar-brand span {
+    font-size: 11px;
+}
+
+.sidebar-icon-only .navbar-brand-wrapper, .sidebar-icon-only .sidebar {
+    width: 70px;
+}
+
+.sidebar-icon-only .navbar-brand-wrapper .brand-logo-mini {
+    display: inline-block;
+}
+
+.sidebar {
+    min-height: calc(100vh - 50px);
+    background: #2c343b;
+    font-family: 'Roboto', sans-serif;
+    padding: 0px;
+    width: 230px;
+    z-index: 11;
+    transition: width 0.25s ease, background 0.25s ease;
+    display: inline;
+    border-radius: 0;
+}
+.brand-logo-mini img {
+    margin: auto;
+}
+.navbar-brand-wrapper {
+    transition: width 0.25s ease, background 0.25s ease;
+    -webkit-transition: width 0.25s ease, background 0.25s ease;
+    -moz-transition: width 0.25s ease, background 0.25s ease;
+    -ms-transition: width 0.25s ease, background 0.25s ease;
+    background: #2c343b;
+    width: 230px;
+    height: 50px;
+    padding: 0;
+}
+
+.sidebar .nav {
+    overflow: hidden;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    margin-bottom: 60px;
+    clear: both;
+    margin: 30px 0 60px 0;
+    width: 100%;
+}
+
+.sidebar .navbar-nav {
+    width: 100%;
+}
+
+.sidebar .nav .nav-item {
+    padding: 0;
+    transition-duration: 0.25s;
+    transition-property: background;
+    margin: 0 10px 6px 10px;
+    border-radius: 6px;
+}
+
+.sidebar .nav .nav-item .nav-link {
+    display: flex;
+    color: #fff;
+    transition-duration: 0.45s;
+    transition-property: color;
+    line-height: 25px;
+    padding: 7px;
+}
+
+.sidebar .nav .nav-item .nav-link i.menu-icon {
+    font-size: 23px;
+    color: #fff;
+}
+
+.sidebar .nav .nav-item .nav-link:hover,.sidebar .nav .nav-item .nav-link:active,.sidebar .nav .nav-item .nav-link:focus {
+    background: none;
+}
+
+.sidebar-icon-only .sidebar .nav {
+    overflow: visible;
+}
+
+.sidebar-icon-only li:hover {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+.sidebar-icon-only .sidebar .nav .nav-item.hover-open .nav-link .menu-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: #424e58;
+    padding: 0.5rem 1.4rem;
+    left: 50px;
+    position: absolute;
+    text-align: left;
+    top: 0;
+    bottom: 0;
+    width: 220px;
+    z-index: 1;
+    line-height: 1.8;
+    border-radius: 0 5px 5px 0px;
+}
+
+.sidebar .nav .nav-item .nav-link .menu-title {
+    font-size: 14px;
+    padding-left: 5px;
+}
+
+.sidebar .nav .nav-item.active, .sidebar .nav .nav-item:hover {
+    background: #424e58;
+}
+
+.sidebar .nav .nav-item .collapse {
+    z-index: 999;
+}
+
+.sidebar .nav.sub-menu {
+    margin-bottom: 0px;
+    margin-top: 0;
+    list-style: none;
+}
+
+.sidebar .nav {
+    overflow: hidden;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    margin-bottom: 60px;
+    clear: both;
+    margin: 30px 0 60px 0;
+}
+
+.sidebar .nav.sub-menu .nav-item, .sidebar-icon-only .sidebar .nav.sub-menu {
+    padding: 0;
+}
+
+.sidebar .nav .nav-item {
+    padding: 0;
+    transition-duration: 0.25s;
+    transition-property: background;
+    margin: 0 10px 6px 10px;
+    border-radius: 6px;
+}
+
+.sidebar .nav.sub-menu .nav-item .nav-link {
+    color: #f6f6f6;
+    padding: 0.75rem 2rem 0.75rem 2rem;
+    position: relative;
+    font-size: 13px;
+    line-height: 1;
+    height: auto;
+    border-top: 0;
+}
+
+.sidebar .nav .nav-item .nav-link {
+    display: flex;
+    color: #fff;
+    transition-duration: 0.45s;
+    transition-property: color;
+    line-height: 25px;
+    padding: 7px;
+}
+
+.sidebar .nav.sub-menu .nav-item .nav-link:before {
+    content: "\F054";
+    font-family: "Material Design Icons";
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    color: #f6f6f6;
+    font-size: 15px;
+}
+
+@media (max-width: 992px) {
+
+
+    .sidebar-offcanvas {
+        position: fixed;
+        max-height: calc(100vh - 70px);
+        top: 75px;
+        bottom: 0;
+        overflow: auto;
+        -webkit-transition: all 0.25s ease-out;
+        transition: all 0.25s ease-out;
+        left: 0px;
+      }
+    .sidebar-offcanvas.active {
+        left: 0;
+    }
+    .navbar .navbar-menu-wrapper .navbar-toggler:not(.navbar-toggler-right), .navbar .navbar-brand-wrapper .navbar-brand.brand-logo {
+        display: block;
+    }
+    .sidebar-icon-only .navbar-brand-wrapper, .sidebar-icon-only .sidebar {
+        display: block;
+        width: 250px;
+        left: -250px;
+    }
+    .sidebar-icon-only .navbar-brand-wrapper .brand-logo-mini {
+        display: none;
+    }
+    
+    .sidebar-icon-only .sidebar .nav .nav-item .nav-link[aria-expanded] .menu-title {
+        border-radius: 0 5px 0 0px;
+        display: inline-block;
+        text-align: left;
+    }
+    .sidebar-icon-only .sidebar .nav .nav-item .nav-link {
+        display: block;
+        text-align: left;
+    }
+    .sidebar-icon-only .sidebar .nav .nav-item .nav-link i.menu-icon {
+        margin-right: 7px;
+        margin-left: 0;
+    }
+    .sidebar .nav .nav-item .nav-link .menu-title {
+        display: inline-block !important;
+    }
+    
+}
+
+@media screen and (max-width:767px) {
+    .navbar-nav {
+        margin: 0;
+    }
+    .navbar-brand{
+        float: none;
+    }
+    .btnmargintop {
+        margin-top: 1px;
+        margin-bottom: 20px;
+    }
+}

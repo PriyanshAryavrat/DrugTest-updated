@@ -1,0 +1,164 @@
+.user-heading h3 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 500;
+    float: left;
+}
+.user-heading .onoffswitch3 {
+    float: right;
+    margin: 1px 0 0;
+}
+.user-heading .onoffswitch3 button {
+    float: right;
+}
+
+.userbutton-group { 
+    margin: 10px 0 0;
+}
+
+.userbutton-group button {
+    border-radius: 5px;
+    border: 0;
+    color: #fff;
+    padding: 0px 20px;
+    font-size: 16px;
+    height: 32px;
+    line-height: 32px;
+    transition: all 0.5s ease;
+    margin-right: 10px;
+    border: 1px solid #1e9ff2;
+}
+
+.userbutton-group button:hover {
+    background:#fff;
+    border: 1px solid #1e9ff2;
+    color: #1e9ff2;
+}
+
+.clearfix:after {
+    clear: both;
+    display: block;
+    content: "";
+}
+
+.clearfix {
+    clear: both;
+    display: block;
+}
+
+.form-fieldset {
+    border:1px solid #acacad;
+    padding: 10px 20px;
+    margin-bottom: 30px;
+}
+
+.form-fieldset legend {
+    width: auto;
+    border: 0;
+    font-size: 18px;
+    color: #424e58;
+    padding: 0 10px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.formbox .react-datepicker-wrapper input {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.tabsection {
+    margin-top: 20px;
+}
+
+.redtext {
+    color: #b31e26;
+}
+
+.tab-outerbox ul {
+    padding-left: 20px;
+    border-bottom: 0;
+}
+
+.tab-outerbox a.nav-link.active {
+    border-bottom: 0 !important;
+    background: #f1f1f1;
+    border-radius: 0;
+    color: #1e9ff2;
+    border: 1px solid #acacad;
+    position: relative;
+    bottom: -1px;
+}
+
+.tab-outerbox a {
+    font-weight: 500;
+    color: #6b6b6b;
+    font-size: 15px;
+}
+
+.tab-outerbox a:hover {
+    color: #1e9ff2;
+}
+
+.tab-outerbox .tab-content {
+    border:1px solid #acacad;
+    padding: 10px 22px;
+}
+
+.action-group a {
+    color: #1e9ff2;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.nav-tabs>li {
+    cursor: pointer;
+}
+.addinner-header {
+    background-color: #f6f6f6;
+    padding: 5px 10px 10px;
+    margin-bottom: 20px;
+}
+.padding0{
+    padding: 0;
+}
+
+
+.addclienttb {
+    padding: 0 10px 20px;
+    width: 90%;
+    margin: auto;
+}
+
+
+
+
+.page-title i.mdi.mdi-chevron-right {
+    font-size: 28px;
+    display: inline-block;
+    line-height: 0;
+    position: relative;
+    top: 4px;
+}
+
+.page-title a {
+    color: #1e9ff2;
+}
+.react-datepicker__day-name, .react-datepicker__day, .react-datepicker__time-name {
+   width: 2.7rem !important;
+    font-size: 11px;
+}
+.react-datepicker__current-month, .react-datepicker-time__header, .react-datepicker-year-header {
+    font-size: 12px !important;
+}

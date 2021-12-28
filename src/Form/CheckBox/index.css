@@ -1,0 +1,25 @@
+.checkbox-style input {
+    float: left;
+    margin: 3px 8px 0 0;
+    height: auto !important;
+    width: auto !important;
+    border: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    min-width: auto;
+}
+
+.checkbox-style label {
+    color: #30353a;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+
+@media screen and (max-width:900px){
+    .form-group.formbox.checkbox-style.m0 {
+        margin-bottom: 10px !important;
+    }
+}
+

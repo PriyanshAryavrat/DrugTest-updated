@@ -1,0 +1,125 @@
+.drugtopheader {
+    border: 0;
+    background: linear-gradient(to right, #4eb4f5 0, #0c84d1 100%);
+    box-shadow: 0px 0px 9px rgba(111, 111, 111, 0.3);
+    display: block;
+    margin-bottom: 15px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 14px 22px;
+    color: #fff;
+}
+
+.drugtopheader h2, .drugtopheader h4 {
+    color: #fff;
+}
+
+.cpuc-enrollment-header h2, .withouter-header h2, .drugtopheader h2 {
+    font-size: 34px;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+}
+
+.cpuc-enrollment-header h4, .withouter-header h4, .drugtopheader h4 {
+    font-size: 23px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.break-subheading {
+    line-height: 32px;
+}
+
+.company-checkbox .form-check {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.company-checkbox .form-check:last-child {
+    margin-right: 0px;
+}
+
+.margin-right10 {
+    margin-right: 10px;
+}
+
+.consortium-section-outer {
+    border-bottom: 1px solid #d2e6f7;
+}
+
+.redstarText {
+    color: #b31e26;
+    font-weight: 900;
+    font-size: 15px;
+    top: -2px;
+}
+
+.bottom-bordernone {
+    border-bottom: 0;
+}
+
+.formsteps {
+    padding: 0px 0 10px 0;
+}
+.previous-heading {
+    color: #424e58 !important;
+    font-size: 15px !important;
+}
+
+
+.add-additional i {
+    float: left;
+    margin-right: 8px;
+}
+
+.addplus-box i {
+    border-radius: 50%;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 26px;
+    background: #1e9ff2;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+} 
+
+.add-additional h4 {
+    margin: 7px 0 0;
+    float: left;
+    font-size: 17px;
+}
+.deleteIcon {
+    position: relative;
+}
+.delete-driver {
+    width: 27px;
+    height: 27px;
+    line-height: 27px;
+    font-size: 18px;
+    float: right;
+    color: white;
+    cursor: pointer;
+    font-weight: 200;
+    position: absolute;
+    top: -8px;
+    right: 0;
+    z-index: 2;
+    background: #ff0000;
+    border-radius: 50%;
+    text-align: center;
+}
+
+
+.form-group.formbox.signature-box.m8 .signature-outer.width100per {
+    width: 100%;
+}
+
+/* Responsive Css */
+@media screen and (max-width:767px){
+    .cpuc-enrollment-header h2, .withouter-header h2, .drugtopheader h2 {
+        font-size: 26px;
+        margin: 0 0 0px 0;
+    }
+}

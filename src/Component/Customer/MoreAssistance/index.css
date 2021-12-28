@@ -1,0 +1,8 @@
+.deficiency-checks label{
+    display: block;
+}
+.deficiency-checks  label {
+    font-size: 14px;
+    color: #424e58 !important;
+    font-weight: 500;
+}

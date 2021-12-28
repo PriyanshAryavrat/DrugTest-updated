@@ -1,0 +1,57 @@
+
+
+.invoice-background{
+    background: url(../../assets/images/funfact-bg-shape.png) no-repeat;
+    height:-webkit-fill-available;
+    height:-moz-available;
+    padding: 55px 0;
+  }
+
+  .Invoice_invoice__1AzYU {
+    background: rgb(255 255 255 / 0.6);
+}
+.LineItems_lineItems__38XHA {
+    margin-top: 20px;
+}
+form.totalamount {
+    width: 100%;
+}
+
+.righttotal-amount {
+    background: #e6e6e6;
+    float: right;
+    width: 300px;
+    padding: 20px;
+    display: inline-flex;
+    border-radius: 5px;
+}
+.amount-label{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.amount-value {
+    font-size: 18px;
+    font-weight: 500;
+    padding-left: 5px;
+}
+.invoice-view-section ul{
+    padding: 0;
+    margin:20px 0 0;
+}
+.invoice-view-section li {
+    margin-bottom: 11px;
+    width: 50%;
+    display: inline-block;
+}
+.invoice-view-section li span{
+    margin-left: 10px;
+}
+
+
+
+@media screen and (max-width:1200px){
+    .Invoice_invoice__1AzYU {
+        width: 90%;
+    }
+}

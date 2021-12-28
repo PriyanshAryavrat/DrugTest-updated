@@ -1,0 +1,14 @@
+input:focus{
+    box-shadow: none !important;
+}
+.form-group.formbox .uploadfile input,.form-group.formbox.signature-box input {
+    border: 0;
+    padding: 0;
+    border-radius: 0;
+    width: 190px;
+}
+.form-group.formbox.checkbox-style.m0 {
+    display: inline-flex;
+    width: 100%; 
+}
+  

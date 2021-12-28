@@ -1,0 +1,103 @@
+@import 'Invoice';
+
+.invoice {
+  max-width: $invoiceMaxWidth;
+  padding: 1 * $rhythm;
+  border-radius: $borderRadius;
+  box-shadow:  0 0 10px #ccc;
+  margin: auto;
+}
+
+.brand {
+  margin-bottom: $rhythm * 1.5;
+  .logo {
+    display: inline-block;
+    border-radius: $borderRadius;
+    width: 320px;
+  }
+}
+
+.addresses {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  text-align: left;
+  .from, .to {
+    padding: $rhythm;
+    border-radius: $borderRadius;
+    width: 100%;
+    max-width:calc($invoiceMaxWidth / 3);
+  }
+  .from {
+    display: block;
+    font-style: normal;
+    margin-right: calc($rhythm / 2);
+    padding: 0;
+    strong{
+      margin-bottom: 5px;
+    }
+    span{
+      clear: both;
+      display: block;
+      line-height: 22px;
+    }
+  }
+  .to {
+    display: block;
+    margin-left: calc($rhythm / 2);
+    padding: 0;
+    .value {
+      text-align: right;
+    }
+  }
+  .address {
+    display: block;
+  }
+}
+
+.valueTable {
+  margin: 0 0 0 auto;
+  border: 1px solid $tableBorderColor;
+  border-radius: $borderRadius;
+  overflow: hidden;
+  width: 100%;
+  min-width: calc($invoiceMaxWidth / 3);
+  max-width:calc($invoiceMaxWidth / 3);
+  & > .row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-bottom: 1px solid $tableBorderColor;
+    &:last-of-type {
+      border-bottom: none;
+    }
+    & > div {
+      padding: calc($rhythm / 2);
+    }
+    & > .label {
+      @extend %flex-center;
+      justify-content: flex-start;
+      font-weight: bold;
+    }
+
+  }
+}
+
+.totalContainer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.pay {
+  display: flex;
+  justify-content: flex-end;
+  padding: ($rhythm * 1) 0 ($rhythm) $rhythm;
+}
+
+button.payNow {
+  display: block;
+  padding: ($rhythm) ($rhythm * 2);
+  background: lightyellow;
+  border-radius: $borderRadius;
+  border: 1px solid #444;
+}

@@ -1,0 +1,15 @@
+.beneficiary-check .form-group.formbox {
+    display: inline-block;
+    margin-right: 30px;
+    width: 10%;
+}
+
+.margin-top6{
+    margin-top: 6px;
+}
+
+.consortium-section-outer p {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 22px;
+}

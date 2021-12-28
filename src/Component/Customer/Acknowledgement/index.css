@@ -1,0 +1,20 @@
+.request-information {
+    margin: 20px 0;
+}
+.request-information h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #424e58;
+}
+
+
+.checknoyesbox label{
+    font-size: 14px;
+    color: #424e58;
+    font-weight: 500;
+}
+
+.request-information p {
+    font-size: 15px;
+    font-weight: 400;
+}

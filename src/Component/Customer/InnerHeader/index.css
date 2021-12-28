@@ -1,0 +1,22 @@
+.innerdropdown {
+    right: -160px !important;
+    left: auto !important;
+    transform: none !important;
+}
+
+
+.dropdownmenu ul {
+    padding: 0;
+    margin: 0;
+}
+.dropdownmenu li { 
+    position: relative;
+}
+
+.inner-submenu {
+    top: 0 !important;
+    right: 0 !important;
+    transform: translate(160px, 0) !important;
+}
+
+

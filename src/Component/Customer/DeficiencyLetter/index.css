@@ -1,0 +1,21 @@
+.newtcp-form p {
+    font-size: 16px;
+    margin: 20px 0;
+    color: #333;
+}
+
+
+.email-enrolment {
+    float: left;
+}
+.email-enrolment h4 {
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 9px 20px;
+    font-size: 15px;
+    text-align: center;
+    color: #333;
+}
+
+
+

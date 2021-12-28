@@ -1,0 +1,52 @@
+textarea:focus, input:focus, button:focus {
+    outline: none;
+}
+
+.following-address {
+    border-top: 1px solid #e8e8e8;
+    padding-top: 10px;
+    clear: both;
+    display: block;
+}
+
+.following-address label {
+    font-size: 14px;
+    color: #424e58;
+    font-weight: 500;
+}
+
+.following-address textarea {
+    border: 1px solid #acacad;
+    border-radius: 5px;
+    padding: 15px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.selectgroup input {
+    height: auto !important;
+}
+
+.selectgroup .css-yk16xz-control, .selectgroup .css-1pahdxg-control {
+    min-height: 0 !important;
+
+}
+
+.selectgroup .css-tlfecz-indicatorContainer, .selectgroup .css-1pahdxg-control .css-1gtu0rj-indicatorContainer {
+    padding: 0px 8px !important;
+}
+
+.selectgroup .css-1pahdxg-control:hover {
+    border-color: inherit !important;
+    box-shadow: none !important;
+}
+
+
+.selectgroup .css-1pahdxg-control {
+    border-color:none;
+    border-radius: none;
+    border:1px solid #ccc !important;
+    box-shadow: none;
+    min-height:inherit !important;
+
+}

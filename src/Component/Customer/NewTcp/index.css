@@ -1,0 +1,30 @@
+.tcp-listing{
+    padding: 0;
+    margin-bottom: 0;
+}
+.tcp-listing li {
+    list-style: inside;
+    margin-bottom: 15px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.tcp-listing li:last-child{
+    margin-bottom: 0;
+}
+
+.consortium-section-outer h5 {
+    font-size: 17px;
+    color: #333;
+}
+.tcp-application-box {
+    margin-bottom: 30px;
+}
+.tcp-application-box h4 {
+    margin: 0 0 15px;
+    font-size: 16px;
+}
+.tcp-application-box ul.tcp-listing li {
+    line-height: 15px;
+}
+

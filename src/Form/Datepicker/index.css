@@ -1,0 +1,18 @@
+.formbox .react-datepicker-wrapper{
+    width:100%;
+}  
+
+
+.react-datepicker__day-name, .react-datepicker__day, .react-datepicker__time-name {
+    color: #000;
+    display: inline-block;
+    width: 2.7rem;
+    line-height: 2.7rem;
+    text-align: center;
+    margin: 0.166rem;
+    font-size: 12px;
+}
+.react-datepicker__current-month, .react-datepicker-time__header, .react-datepicker-year-header {
+
+    font-size: 12px;
+}

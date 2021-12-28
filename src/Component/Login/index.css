@@ -1,0 +1,74 @@
+.backImage {
+    background-image: url(../../../src/assets/images/background1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    height: -webkit-fill-available;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+}
+
+.outer-margin {
+    margin: 20px 0;
+}
+
+.loginpage {
+    width: 600px;
+    background: #fff;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 9px rgba(148, 148, 148, 0.4);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.margin-bottom20 {
+    margin-bottom: 20px;
+}
+
+.login-logo img {
+    width: auto;
+    margin-top: 20px;
+}
+
+.home-cardbox {
+    margin-bottom: 0px;
+}
+
+.home-cardbox h3 {
+    background: linear-gradient(to right, #4eb4f5 0, #0c84d1 100%);
+    padding: 0 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 0px 6px 1px rgba(197, 197, 197, 0.5);
+    transition: all 0.5s ease;
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+    height: 55px;
+    line-height: 55px;
+}
+
+.home-cardbox h3:hover {
+    box-shadow: 0px 0px 10px 1px rgba(197, 197, 197, 0.8);
+    background: linear-gradient(to right, #0c84d1 0, #4eb4f5 100%);
+}
+
+
+
+@media screen and (max-width:767px){
+    .loginpage {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:767px){
+    .loginpage {
+        width:80%;
+    }
+}

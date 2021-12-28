@@ -1,0 +1,25 @@
+select:focus{
+    outline: none;
+}
+.form-group.formbox.selectbox {
+    position: relative;
+}
+.selectbox label:before {
+    content: "\F140";
+    font-family: "Material Design Icons";
+    position: absolute;
+    top: 22px;
+    right: 2px;
+    font-size: 27px;
+}
+.selectbox select {
+    padding: 6px 27px 6px 6px;
+    width: 100%;
+    box-shadow: none;
+    background: #fff;
+    background-image: none;
+    -webkit-appearance: none;
+    height: 33px;
+    border: 1px solid #acacad;
+    border-radius: 5px;
+}

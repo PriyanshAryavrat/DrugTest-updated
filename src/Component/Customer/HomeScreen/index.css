@@ -1,0 +1,327 @@
+.accurate-home {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  overflow: hidden;
+}
+
+.accurate-logo {
+  position: relative;
+  z-index: 2;
+}
+
+.accurate-left-group {
+  margin: auto;
+  text-align: center;
+  height: 100vh;
+  padding: 10% 0 0;
+  background: url(../../../assets/images/funfact-bg-shape.png) no-repeat;
+}
+
+.accurate-home .col-lg-6.col-md-6.col-sm-6 {
+  padding: 0;
+}
+
+.accurate-button {
+  padding-top: 50px;
+  z-index: 2;
+  position: relative;
+  width: 65%;
+  margin: auto;
+}
+
+.button-card {
+  padding-right: 25px;
+}
+
+.button-card a {
+  background: #4eb4f5;
+  display: block;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 24px;
+  color: #fff;
+  border-radius: 7px;
+  transition: all 0.5s ease;
+  margin-bottom: 20px;
+  width: 100%;
+  margin: auto auto 30px auto;
+  transition: all 0.5s ease;
+  border: 0;
+}
+
+.button-card a:hover, .button-card a:active, .button-card a:focus {
+  background: #309ee4;
+}
+
+.button-card .dropdown .dropdown-toggle:after {
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-bottom: 0;
+  font: normal normal normal 24px/1 "Material Design Icons";
+  content: "\f140";
+  width: auto;
+  height: auto;
+  vertical-align: baseline;
+  font-size: 30px;
+  line-height: 34px;
+  float: right;
+}
+
+.button-card .dropdown-menu.show {
+  background: #fff;
+  width: 100%;
+  border: 0;
+  box-shadow: 0 0 5px rgb(183 183 183 / 0.8);
+  transform: none !important;
+  top: 53px !important;
+  height: fit-content;
+}
+
+.button-card .dropdown .dropdown-menu .dropdown-item {
+  display: block;
+  font-size: 15px;
+  padding: 10px;
+  font-weight: 500;
+  color: #201d46;
+  transition: all 0.5s ease;
+}
+
+.button-card .dropdown .dropdown-menu .dropdown-item:hover {
+  background: #4eb4f5;
+  color: #fff;
+}
+
+.accurate-right-group {
+  position: relative;
+  height: 100vh;
+}
+
+/* .accurate-right-group::before {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  left: -2px;
+  top: 0;
+  content: '';
+  background: url(../../../assets/images/shape.png) no-repeat left center;
+  -webkit-background-size: auto 100%;
+  -ms-background-size: auto 100%;
+  -moz-background-size: auto 100%;
+  background-size: auto 100%;
+} */
+
+.accurate-right-group img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bg-bubbles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.bg-bubbles li {
+  position: absolute;
+  list-style: none;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(103 186 239 / 10%);
+  bottom: -160px;
+  -webkit-animation: square 25s infinite;
+  animation: square 25s infinite;
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+}
+
+.bg-bubbles li:nth-child(1) {
+  left: 10%;
+}
+
+.bg-bubbles li:nth-child(2) {
+  left: 16%;
+  width: 80px;
+  height: 80px;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-duration: 17s;
+  animation-duration: 17s;
+}
+
+.bg-bubbles li:nth-child(3) {
+  left: 25%;
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s;
+}
+
+.bg-bubbles li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  -webkit-animation-duration: 22s;
+  animation-duration: 22s;
+  background-color: rgba(255, 255, 255, 0.10);
+}
+
+.bg-bubbles li:nth-child(5) {
+  left: 70%;
+}
+
+.bg-bubbles li:nth-child(6) {
+  left: 80%;
+  width: 120px;
+  height: 120px;
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.bg-bubbles li:nth-child(7) {
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  -webkit-animation-delay: 7s;
+  animation-delay: 7s;
+}
+
+.bg-bubbles li:nth-child(8) {
+  left: 55%;
+  width: 20px;
+  height: 20px;
+  -webkit-animation-delay: 15s;
+  animation-delay: 15s;
+  -webkit-animation-duration: 40s;
+  animation-duration: 40s;
+}
+
+.bg-bubbles li:nth-child(9) {
+  left: 25%;
+  width: 10px;
+  height: 10px;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-duration: 40s;
+  animation-duration: 40s;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.bg-bubbles li:nth-child(10) {
+  left: 90%;
+  width: 90px;
+  height: 90px;
+  animation-delay: 11s;
+}
+
+@-webkit-keyframes square {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-700px) rotate(600deg);
+    transform: translateY(-700px) rotate(600deg);
+  }
+}
+
+@keyframes square {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-700px) rotate(600deg);
+    transform: translateY(-700px) rotate(600deg);
+  }
+}
+
+.ocean {
+  height: 10%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+}
+
+.wave {
+  background: url(../../../assets/images/bg_3.png) repeat-x;
+  position: absolute;
+  top: -198px;
+  width: 6400px;
+  height: 198px;
+  opacity: 0.5;
+  animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+.wave:nth-of-type(2) {
+  top: -170px;
+  animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+  opacity: 1;
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+@keyframes swell {
+  0%, 100% {
+    transform: translate3d(0, -25px, 0);
+  }
+  50% {
+    transform: translate3d(0, 5px, 0);
+  }
+}
+
+@media screen and (max-width:1100px) {
+  .accurate-button {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width:992px) {
+  .accurate-logo img {
+    width: 75%;
+  }
+  .accurate-button {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .home-screen1 {
+    width: 80%;
+    transform: inherit;
+    left: 0;
+    right: 0;
+    margin: 10% auto;
+    top: 0;
+  }
+  .accurate-logo img {
+    width: auto;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .login-logo img {
+    width: 100%;
+    margin-top: 20px;
+  }
+}

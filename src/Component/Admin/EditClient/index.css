@@ -1,0 +1,209 @@
+.user-heading h3 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 500;
+    float: left;
+}
+.user-heading .onoffswitch3 {
+    float: right;
+    margin: 1px 0 0;
+}
+.user-heading .onoffswitch3 button {
+    float: right;
+}
+
+.userbutton-group {
+    margin: 10px 0 0;
+}
+
+.userbutton-group button {
+    border-radius: 5px;
+    border: 0;
+    color: #fff;
+    padding: 0px 20px;
+    font-size: 16px;
+    height: 32px;
+    line-height: 32px;
+    transition: all 0.5s ease;
+    margin-right: 10px;
+    border: 1px solid #1e9ff2;
+}
+
+.userbutton-group button:hover {
+    background:#fff;
+    border: 1px solid #1e9ff2;
+    color: #1e9ff2;
+}
+
+.form-fieldset {
+    border:1px solid #acacad;
+    padding: 10px 20px;
+    margin-bottom: 30px;
+}
+
+.form-fieldset legend {
+    width: auto;
+    border: 0;
+    font-size: 18px;
+    color: #424e58;
+    padding: 0 10px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.tabsection {
+    margin-top: 20px;
+}
+
+.redtext {
+    color: #b31e26;
+}
+
+.tab-outerbox ul {
+    padding-left: 20px;
+    border-bottom: 0;
+}
+
+.tab-outerbox a.nav-link.active {
+    border-bottom: 0 !important;
+    background: #f1f1f1;
+    border-radius: 0;
+    color: #1e9ff2;
+    border: 1px solid #acacad;
+    position: relative;
+    bottom: -1px;
+}
+
+.tab-outerbox a {
+    font-weight: 500;
+    color: #6b6b6b;
+    font-size: 15px;
+}
+
+.tab-outerbox a:hover {
+    color: #1e9ff2;
+}
+
+.tab-outerbox .tab-content {
+    border:1px solid #acacad;
+    padding: 10px 22px;
+}
+
+.action-group a {
+    color: #1e9ff2;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.nav-tabs>li {
+    cursor: pointer;
+}
+.addinner-header {
+    background-color: #f6f6f6;
+    padding: 5px 10px 10px;
+    margin-bottom: 20px;
+}
+.padding0{
+    padding: 0;
+}
+
+
+.addclienttb {
+    padding: 0 10px 20px;
+    width: 90%;
+    margin: auto;
+}
+
+
+
+
+.page-title i.mdi.mdi-chevron-right {
+    font-size: 28px;
+    display: inline-block;
+    line-height: 0;
+    position: relative;
+    top: 4px;
+}
+
+.page-title a {
+    color: #1e9ff2;
+}
+
+.border0{
+    border: 0;
+}
+.modal-dialog.formModal {
+    margin: 5% auto;
+}
+.formdate-modal {
+    padding: 15px 20px 10px 20px;
+}
+.formModal button.close {
+    margin-right: 10px;
+    opacity: 1;
+    font-size: 28px;
+    color: #848282;
+    position: absolute;
+    right: 0;
+    z-index: 2;
+}
+.formdate-modal h3 {
+    font-size: 23px;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+}
+.uploadfile-image img {
+    width: 16%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.bottom-btn-group button.graybg{
+    background: #a2a2a2 !important;
+}
+
+.hearder-lefticon i {
+    font-size: 37px;
+    line-height: 24px;
+    float: left;
+    color: #1e9ff2;
+}
+
+
+@media screen and (max-width:992px){
+    .addclienttb {
+        width:98%;
+    }
+}
+
+@media screen and (max-width:767px){
+    .page-title {
+        font-size: 16px;
+    }
+    .user-heading h3 {
+        font-size: 21px;
+    }
+    .form-fieldset {
+      padding: 10px 13px;
+    }
+    .form-fieldset legend {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:400px){
+    .tab-outerbox ul {
+        padding-left: 0;
+        border-bottom: 0;
+    }
+    .tab-outerbox a{
+        bottom: -4px;
+        padding: 10px 8px;
+        font-size: 13px;
+    }
+    .tab-outerbox .tab-content {
+        padding: 10px 4px;
+    }
+    .addclienttb {
+        width: 100%;
+    }
+}
