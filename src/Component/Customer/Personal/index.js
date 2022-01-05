@@ -194,11 +194,12 @@ class PersonalTest extends React.Component {
                           <label>First Name<sup className="redstarText">*</sup></label>
                           <TextValidator
                             name="firstName"
+                            placeholder="First Name"
                             type="text"
                             value={this.state.firstName}
-                            placeholder="First Name"
-                            validators={["required"]}
-                            errorMessages={["This field is required"]}
+                            validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                            errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                            maxLength="30"
                             onChange={(e) => {
                               this.setState({ firstName: e.target.value })
                             }}
@@ -225,8 +226,9 @@ class PersonalTest extends React.Component {
                             type="text"
                             value={this.state.lastName}
                             placeholder="Last Name"
-                            validators={["required"]}
-                            errorMessages={["This field is required"]}
+                            validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                            errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                            maxLength="30"
                             onChange={(e) => {
                               this.setState({ lastName: e.target.value });
                             }}
@@ -256,8 +258,11 @@ class PersonalTest extends React.Component {
                             type="email"
                             placeholder="Email"
                             value={this.state.email}
-                            validators={['required', 'isEmail']}
-                            errorMessages={['This field is required', 'Email is not valid']}
+                            validators={['required','matchRegexp:^([a-zA-Z0-9])(([a-zA-Z0-9])*([\._\+-])*([a-zA-Z0-9]))*@([a-zA-Z0-9])*.(([a-zA-Z]{2,4}?)*((\.)[a-zA-Z]{2,4}?))$']}
+                            errorMessages={[
+                            "This field is required",
+                              "Email is not valid",
+                            ]}
                             onChange={(e) => {
                               this.setState({ email: e.target.value });
                             }}
@@ -338,8 +343,9 @@ class PersonalTest extends React.Component {
                               type="text"
                               value={this.state.address}
                               placeholder="Address"
-                              validators={["required"]}
-                              errorMessages={["This field is required"]}
+                              validators={["required" , "trim"]}
+                              maxlength="30"
+                              errorMessages={["This field is required","can not be empty"]}
                               onChange={(e) => {
                                 this.setState({
                                   address: e.target.value,
@@ -357,8 +363,9 @@ class PersonalTest extends React.Component {
                               type="text"
                               value={this.state.city}
                               placeholder="City"
-                              validators={["required"]}
-                              errorMessages={["This field is required"]}
+                              validators={["required","trim"]}
+                              errorMessages={["This field is required","can not be empty"]}
+                              maxlength="20"
                               onChange={(e) => {
                                 this.setState({ city: e.target.value });
                               }}
@@ -393,8 +400,9 @@ class PersonalTest extends React.Component {
                               type="text"
                               value={this.state.zipCode}
                               placeholder="Zip Code"
-                              validators={["required"]}
-                              errorMessages={["This field is required"]}
+                              validators={["trim","required","isNumber"]}
+                              errorMessages={["Can not be empty","This field is required","please enter valid zip code",]}
+                              maxlength="8"
                               onChange={(e) => {
                                 this.setState({ zipCode: e.target.value });
                               }}
@@ -440,8 +448,11 @@ class PersonalTest extends React.Component {
                             type="text"
                             value={this.state.mailingEmail}
                             placeholder="Email"
-                            validators={['isEmail']}
-                            errorMessages={['Email is not valid']}
+                            validators={['matchRegexp:^([a-zA-Z0-9])(([a-zA-Z0-9])*([\._\+-])*([a-zA-Z0-9]))*@([a-zA-Z0-9])*.(([a-zA-Z]{2,4}?)*((\.)[a-zA-Z]{2,4}?))$']}
+                            errorMessages={[
+                          
+                              "Email is not valid",
+                            ]}
                             onChange={(e) => {
                               this.setState({ mailingEmail: e.target.value })
                             }}

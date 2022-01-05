@@ -1,8 +1,8 @@
 // const baseUrl = "http://localhost:3005";
-// const baseUrl = "http://3.7.53.241:3005";
+//  const baseUrl = "http://3.7.53.241:3005";
 
 // const baseUrl = "http://52.88.121.110:3005"
-const baseUrl = "http://192.168.1.47:8000"
+ const baseUrl = "http://192.168.1.47:8000"
 // Abhishek sir IP. 
  
 let apiPath = {

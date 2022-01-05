@@ -347,8 +347,9 @@ class SibblingShipOther extends React.Component {
                       type="text"
                       value={this.state.name}
                       placeholder="Name"
-                      validators={["required"]}
-                      errorMessages={this.state.inputError}
+                      validators={["required" , "trim"  ]}
+                      errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                      maxLength="30"  
                       onChange={(e) => {
                         let value = e.target.value;
                         value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -387,7 +388,7 @@ class SibblingShipOther extends React.Component {
                       autoComplete="off"
                       placeholder="Email"
                       value={this.state.email}
-                      validators={["required", "isEmail"]}
+                      validators={["required" , 'matchRegexp:^([a-zA-Z0-9])(([a-zA-Z0-9])*([\._\+-])*([a-zA-Z0-9]))*@([a-zA-Z0-9])*.(([a-zA-Z]{2,4}?)*((\.)[a-zA-Z]{2,4}?))$']}
                       errorMessages={[
                         "This field is required",
                         "Email is not valid",
@@ -725,8 +726,9 @@ class SibblingShipOther extends React.Component {
                         type="text"
                         value={this.state.childFirstName}
                         placeholder="First Name"
-                        validators={["required"]}
-                        errorMessages={["This field is required"]}
+                        validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                        errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                        maxLength="30"  
                         onChange={(e) => {
                           let value = e.target.value;
                           value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -765,8 +767,9 @@ class SibblingShipOther extends React.Component {
                         type="text"
                         value={this.state.childLastName}
                         placeholder="Last Name"
-                        validators={["required"]}
-                        errorMessages={["This field is required"]}
+                        validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                                errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                                maxLength="30"  
                         onChange={(e) => {
                           let value = e.target.value;
                           value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -862,13 +865,11 @@ class SibblingShipOther extends React.Component {
                         type="email"
                         placeholder="Email"
                         value={this.state.childemail}
-                        validators={this.state.childEmailme ? ["isEmail"] : ["required", "isEmail"]}
-                        errorMessages={this.state.childEmailme ? [
+                        validators={["required" , 'matchRegexp:^([a-zA-Z0-9])(([a-zA-Z0-9])*([\._\+-])*([a-zA-Z0-9]))*@([a-zA-Z0-9])*.(([a-zA-Z]{2,4}?)*((\.)[a-zA-Z]{2,4}?))$']}
+                        errorMessages={[
+                          "This field is required",
                           "Email is not valid",
-                        ] : [
-                            "This field is required",
-                            "Email is not valid",
-                          ]}
+                        ]}
                         onChange={(e) => {
                           this.setState({ childemail: e.target.value });
                         }}
@@ -1123,8 +1124,9 @@ class SibblingShipOther extends React.Component {
                         type="text"
                         value={this.state.childFirstName}
                         placeholder="First Name"
-                        validators={["required"]}
-                        errorMessages={["This field is required"]}
+                        validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                        errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                        maxLength="30"  
                         onChange={(e) => {
                           let value = e.target.value;
                           value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -1163,8 +1165,9 @@ class SibblingShipOther extends React.Component {
                         type="text"
                         value={this.state.childLastName}
                         placeholder="Last Name"
-                        validators={["required"]}
-                        errorMessages={["This field is required"]}
+                        validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                        errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                        maxLength="30"  
                         onChange={(e) => {
                           let value = e.target.value;
                           value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -1337,8 +1340,9 @@ class SibblingShipOther extends React.Component {
                         type="text"
                         value={this.state.motherFirstName}
                         placeholder="First Name"
-                        validators={["required"]}
-                        errorMessages={["This field is required"]}
+                        validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                        errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                        maxLength="30"  
                         onChange={(e) => {
                           let value = e.target.value;
                           value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -1377,8 +1381,9 @@ class SibblingShipOther extends React.Component {
                         type="text"
                         value={this.state.motherLastName}
                         placeholder="Last Name"
-                        validators={["required"]}
-                        errorMessages={["This field is required"]}
+                        validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                                errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                                maxLength="30"  
                         onChange={(e) => {
                           let value = e.target.value;
                           value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -1474,13 +1479,11 @@ class SibblingShipOther extends React.Component {
                         placeholder="Email"
                         disabled={this.state.motherEmailme}
                         value={this.state.motheremail}
-                        validators={this.state.motherEmailme ? ["isEmail"] : ["required", "isEmail"]}
-                        errorMessages={this.state.motherEmailme ? [
+                        validators={["required" , 'matchRegexp:^([a-zA-Z0-9])(([a-zA-Z0-9])*([\._\+-])*([a-zA-Z0-9]))*@([a-zA-Z0-9])*.(([a-zA-Z]{2,4}?)*((\.)[a-zA-Z]{2,4}?))$']}
+                        errorMessages={[
+                          "This field is required",
                           "Email is not valid",
-                        ] : [
-                            "This field is required",
-                            "Email is not valid",
-                          ]}
+                        ]}
                         onChange={(e) => {
                           this.setState({ motheremail: e.target.value });
                         }}
@@ -1732,8 +1735,9 @@ class SibblingShipOther extends React.Component {
                         type="text"
                         value={this.state.mother2FirstName}
                         placeholder="First Name"
-                        validators={["required"]}
-                        errorMessages={["This field is required"]}
+                        validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                        errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                        maxLength="30"  
                         onChange={(e) => {
                           let value = e.target.value;
                           value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -1772,8 +1776,9 @@ class SibblingShipOther extends React.Component {
                         type="text"
                         value={this.state.mother2LastName}
                         placeholder="Last Name"
-                        validators={["required"]}
-                        errorMessages={["This field is required"]}
+                        validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                        errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                        maxLength="30"  
                         onChange={(e) => {
                           let value = e.target.value;
                           value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -1869,13 +1874,11 @@ class SibblingShipOther extends React.Component {
                         placeholder="Email"
                         disabled={this.state.mother2Emailme}
                         value={this.state.mother2email}
-                        validators={this.state.mother2Emailme ? ["isEmail"] : ["required", "isEmail"]}
-                        errorMessages={this.state.mother2Emailme ? [
+                        validators={["required" , 'matchRegexp:^([a-zA-Z0-9])(([a-zA-Z0-9])*([\._\+-])*([a-zA-Z0-9]))*@([a-zA-Z0-9])*.(([a-zA-Z]{2,4}?)*((\.)[a-zA-Z]{2,4}?))$']}
+                        errorMessages={[
+                          "This field is required",
                           "Email is not valid",
-                        ] : [
-                            "This field is required",
-                            "Email is not valid",
-                          ]}
+                        ]}
                         onChange={(e) => {
                           this.setState({ mother2email: e.target.value });
                         }}
@@ -2128,8 +2131,9 @@ class SibblingShipOther extends React.Component {
                         type="text"
                         value={this.state.child2FirstName}
                         placeholder="First Name"
-                        validators={["required"]}
-                        errorMessages={["This field is required"]}
+                        validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                        errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                        maxLength="30"  
                         onChange={(e) => {
                           let value = e.target.value;
                           value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -2168,8 +2172,9 @@ class SibblingShipOther extends React.Component {
                         type="text"
                         value={this.state.child2LastName}
                         placeholder="Last Name"
-                        validators={["required"]}
-                        errorMessages={["This field is required"]}
+                        validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                                errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                                maxLength="30"  
                         onChange={(e) => {
                           let value = e.target.value;
                           value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -2260,7 +2265,7 @@ class SibblingShipOther extends React.Component {
                         type="email"
                         placeholder="Email"
                         value={this.state.child2email}
-                        validators={["required", "isEmail"]}
+                        validators={["required" , 'matchRegexp:^([a-zA-Z0-9])(([a-zA-Z0-9])*([\._\+-])*([a-zA-Z0-9]))*@([a-zA-Z0-9])*.(([a-zA-Z]{2,4}?)*((\.)[a-zA-Z]{2,4}?))$']}
                         errorMessages={[
                           "This field is required",
                           "Email is not valid",
@@ -2514,8 +2519,9 @@ class SibblingShipOther extends React.Component {
                         type="text"
                         value={this.state.child2FirstName}
                         placeholder="First Name"
-                        validators={["required"]}
-                        errorMessages={["This field is required"]}
+                        validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                        errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                        maxLength="30"  
                         onChange={(e) => {
                           let value = e.target.value;
                           value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -2554,8 +2560,9 @@ class SibblingShipOther extends React.Component {
                         type="text"
                         value={this.state.child2LastName}
                         placeholder="Last Name"
-                        validators={["required"]}
-                        errorMessages={["This field is required"]}
+                        validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                        errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                        maxLength="30"  
                         onChange={(e) => {
                           let value = e.target.value;
                           value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -2775,8 +2782,9 @@ class SibblingShipOther extends React.Component {
                           type="text"
                           value={this.state.ap[idx].firstName}
                           placeholder="First Name"
-                          validators={["required"]}
-                          errorMessages={["This field is required"]}
+                          validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                                errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                                maxLength="30"  
                           data-id={idx}
                           onChange={(e) => {
                             let ap = [...this.state.ap];

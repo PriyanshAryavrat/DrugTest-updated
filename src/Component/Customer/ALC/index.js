@@ -249,8 +249,9 @@ class Alc extends React.Component {
                               type="text"
                               value={this.state.companyName}
                               placeholder="Company Name"
-                              validators={["required"]}
-                              errorMessages={["This field is required"]}
+                              validators={["required","trim"]}
+                              errorMessages={["This field is required","Can not be empty"]}
+                              maxlength="30"
                               onChange={(e) => {
                                 this.setState({ companyName: e.target.value });
                               }}
@@ -271,8 +272,9 @@ class Alc extends React.Component {
                               type="text"
                               value={this.state.ownerName}
                               placeholder="Owner Name"
-                              validators={["required"]}
-                              errorMessages={["This field is required"]}
+                              maxlength="20"
+                              validators={["required","trim"]}
+                              errorMessages={["This field is required","can not be empty"]}
                               onChange={(e) => {
                                 this.setState({ ownerName: e.target.value });
                               }}
@@ -307,8 +309,11 @@ class Alc extends React.Component {
                               type="email"
                               placeholder="Owner Email"
                               value={this.state.ownerEmail}
-                              validators={['required', 'isEmail']}
-                              errorMessages={['This field is required', 'Email is not valid']}
+                              validators={["required" , 'matchRegexp:^([a-zA-Z0-9])(([a-zA-Z0-9])*([\._\+-])*([a-zA-Z0-9]))*@([a-zA-Z0-9])*.(([a-zA-Z]{2,4}?)*((\.)[a-zA-Z]{2,4}?))$']}
+                              errorMessages={[
+                                "This field is required",
+                                "Email is not valid",
+                              ]}
                               onChange={(e) => {
                                 this.setState({ ownerEmail: e.target.value });
                               }}
@@ -324,8 +329,9 @@ class Alc extends React.Component {
                               type="text"
                               value={this.state.companyAddress}
                               placeholder="Company Address"
-                              validators={["required"]}
-                              errorMessages={["This field is required"]}
+                              validators={["required","trim"]}
+                              maxlength="100"
+                              errorMessages={["This field is required","Can not be Empty"]}
                               onChange={(e) => {
                                 this.setState({ companyAddress: e.target.value });
                               }}
@@ -343,8 +349,9 @@ class Alc extends React.Component {
                               type="text"
                               value={this.state.ownerCity}
                               placeholder="City"
-                              validators={["required"]}
-                              errorMessages={["This field is required"]}
+                              maxlength="10"
+                              validators={["required","trim"]}
+                              errorMessages={["This field is required","can not be empty"]}
                               onChange={(e) => {
                                 this.setState({ ownerCity: e.target.value });
                               }}
@@ -381,8 +388,9 @@ class Alc extends React.Component {
                               type="text"
                               value={this.state.ownerZipcode}
                               placeholder="Zip Code"
-                              validators={["required"]}
-                              errorMessages={["This field is required"]}
+                              validators={["trim","required","isNumber"]}
+                              maxlength="8"
+                              errorMessages={["Can not be empty","This field is required","please enter valid zip code",]}
                               onChange={(e) => {
                                 this.setState({ ownerZipcode: e.target.value });
                               }}
@@ -403,9 +411,9 @@ class Alc extends React.Component {
                               name="firstName"
                               type="text"
                               value={this.state.firstName}
-                              placeholder="First Name"
-                              validators={["required"]}
-                              errorMessages={["This field is required"]}
+                              validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                              errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                              maxLength="30"
                               onChange={(e) => {
                                 this.setState({ firstName: e.target.value })
                               }}
@@ -437,8 +445,9 @@ class Alc extends React.Component {
                               type="text"
                               value={this.state.lastName}
                               placeholder="Last Name"
-                              validators={["required"]}
-                              errorMessages={["This field is required"]}
+                              validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                              errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                              maxLength="30"
                               onChange={(e) => {
                                 this.setState({ lastName: e.target.value });
                               }}
@@ -470,7 +479,7 @@ class Alc extends React.Component {
                               type="email"
                               placeholder="Email"
                               value={this.state.email}
-                              validators={["required", "isEmail"]}
+                              validators={["required" , 'matchRegexp:^([a-zA-Z0-9])(([a-zA-Z0-9])*([\._\+-])*([a-zA-Z0-9]))*@([a-zA-Z0-9])*.(([a-zA-Z]{2,4}?)*((\.)[a-zA-Z]{2,4}?))$']}
                               errorMessages={[
                                 "This field is required",
                                 "Email is not valid",

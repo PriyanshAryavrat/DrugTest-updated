@@ -329,8 +329,9 @@ class GrandParentageOther extends React.Component {
                       type="text"
                       value={this.state.name}
                       placeholder="Name"
-                      validators={["required"]}
-                      errorMessages={this.state.inputError}
+                      validators={["required" , "trim"  ]}
+                                errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                                maxLength="30"  
                       onChange={(e) => {
                         let value = e.target.value;
                         value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -369,7 +370,7 @@ class GrandParentageOther extends React.Component {
                       autoComplete="off"
                       placeholder="Email"
                       value={this.state.email}
-                      validators={["required", "isEmail"]}
+                      validators={["required" , 'matchRegexp:^([a-zA-Z0-9])(([a-zA-Z0-9])*([\._\+-])*([a-zA-Z0-9]))*@([a-zA-Z0-9])*.(([a-zA-Z]{2,4}?)*((\.)[a-zA-Z]{2,4}?))$']}
                       errorMessages={[
                         "This field is required",
                         "Email is not valid",
@@ -579,8 +580,9 @@ class GrandParentageOther extends React.Component {
                         type="text"
                         value={this.state.grandFatherFirstName}
                         placeholder="First Name"
-                        validators={["required"]}
-                        errorMessages={["This field is required"]}
+                        validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                        errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                        maxLength="30"    
                         onChange={(e) => {
                           let value = e.target.value;
                           value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -619,8 +621,9 @@ class GrandParentageOther extends React.Component {
                         type="text"
                         value={this.state.grandFatherLastName}
                         placeholder="Last Name"
-                        validators={["required"]}
-                        errorMessages={["This field is required"]}
+                        validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                        errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                        maxLength="30"  
                         onChange={(e) => {
                           let value = e.target.value;
                           value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -713,13 +716,11 @@ class GrandParentageOther extends React.Component {
                         type="email"
                         placeholder="Email"
                         value={this.state.grandFatheremail}
-                        validators={this.state.grandFatherEmailme ? ["isEmail"] : ["required", "isEmail"]}
-                        errorMessages={this.state.grandFatherEmailme ? [
+                        validators={["required" , 'matchRegexp:^([a-zA-Z0-9])(([a-zA-Z0-9])*([\._\+-])*([a-zA-Z0-9]))*@([a-zA-Z0-9])*.(([a-zA-Z]{2,4}?)*((\.)[a-zA-Z]{2,4}?))$']}
+                        errorMessages={[
+                          "This field is required",
                           "Email is not valid",
-                        ] : [
-                            "This field is required",
-                            "Email is not valid",
-                          ]}
+                        ]}
                         onChange={(e) => {
                           this.setState({ grandFatheremail: e.target.value });
                         }}
@@ -997,8 +998,9 @@ class GrandParentageOther extends React.Component {
                         type="text"
                         value={this.state.grandMotherFirstName}
                         placeholder="First Name"
-                        validators={["required"]}
-                        errorMessages={["This field is required"]}
+                        validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                        errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                        maxLength="30"  
                         onChange={(e) => {
                           let value = e.target.value;
                           value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -1040,8 +1042,9 @@ class GrandParentageOther extends React.Component {
                         type="text"
                         value={this.state.grandMotherLastName}
                         placeholder="Last Name"
-                        validators={["required"]}
-                        errorMessages={["This field is required"]}
+                        validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                        errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                        maxLength="30"  
                         onChange={(e) => {
                           let value = e.target.value;
 
@@ -1133,13 +1136,11 @@ class GrandParentageOther extends React.Component {
                         type="email"
                         placeholder="Email"
                         value={this.state.grandMotheremail}
-                        validators={this.state.grandMotherEmailme ? ["isEmail"] : ["required", "isEmail"]}
-                        errorMessages={this.state.grandFatherEmailme ? [
+                        validators={["required" , 'matchRegexp:^([a-zA-Z0-9])(([a-zA-Z0-9])*([\._\+-])*([a-zA-Z0-9]))*@([a-zA-Z0-9])*.(([a-zA-Z]{2,4}?)*((\.)[a-zA-Z]{2,4}?))$']}
+                        errorMessages={[
+                          "This field is required",
                           "Email is not valid",
-                        ] : [
-                            "This field is required",
-                            "Email is not valid",
-                          ]}
+                        ]}
                         onChange={(e) => {
                           this.setState({ grandMotheremail: e.target.value });
                         }}
@@ -1399,8 +1400,9 @@ class GrandParentageOther extends React.Component {
                         type="text"
                         value={this.state.motherFirstName}
                         placeholder="First Name"
-                        validators={["required"]}
-                        errorMessages={["This field is required"]}
+                        validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                        errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                        maxLength="30"  
                         onChange={(e) => {
                           let value = e.target.value;
                           value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -1439,8 +1441,9 @@ class GrandParentageOther extends React.Component {
                         type="text"
                         value={this.state.motherLastName}
                         placeholder="Last Name"
-                        validators={["required"]}
-                        errorMessages={["This field is required"]}
+                        validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                                errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                                maxLength="30"  
                         onChange={(e) => {
                           let value = e.target.value;
                           value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -1532,13 +1535,11 @@ class GrandParentageOther extends React.Component {
                         type="email"
                         placeholder="Email"
                         value={this.state.motheremail}
-                        validators={this.state.motherEmailme ? ["isEmail"] : ["required", "isEmail"]}
-                        errorMessages={this.state.motherEmailme ? [
+                        validators={["required" , 'matchRegexp:^([a-zA-Z0-9])(([a-zA-Z0-9])*([\._\+-])*([a-zA-Z0-9]))*@([a-zA-Z0-9])*.(([a-zA-Z]{2,4}?)*((\.)[a-zA-Z]{2,4}?))$']}
+                        errorMessages={[
+                          "This field is required",
                           "Email is not valid",
-                        ] : [
-                            "This field is required",
-                            "Email is not valid",
-                          ]}
+                        ]}
                         onChange={(e) => {
                           this.setState({ motheremail: e.target.value });
                         }}
@@ -1793,8 +1794,9 @@ class GrandParentageOther extends React.Component {
                         type="text"
                         value={this.state.childFirstName}
                         placeholder="Name"
-                        validators={["required"]}
-                        errorMessages={["This field is required"]}
+                        validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                        errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                        maxLength="30"  
                         onChange={(e) => {
                           let value = e.target.value;
                           value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -1833,8 +1835,9 @@ class GrandParentageOther extends React.Component {
                         type="text"
                         value={this.state.childLastName}
                         placeholder="Last Name"
-                        validators={["required"]}
-                        errorMessages={["This field is required"]}
+                        validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                                errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                                maxLength="30"  
                         onChange={(e) => {
                           let value = e.target.value;
                           value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -1926,13 +1929,11 @@ class GrandParentageOther extends React.Component {
                         placeholder="Email"
                         value={this.state.childemail}
                         disabled={this.state.childEmailme}
-                        validators={this.state.childEmailme ? ["isEmail"] : ["required", "isEmail"]}
-                        errorMessages={this.state.childEmailme ? [
+                        validators={["required" , 'matchRegexp:^([a-zA-Z0-9])(([a-zA-Z0-9])*([\._\+-])*([a-zA-Z0-9]))*@([a-zA-Z0-9])*.(([a-zA-Z]{2,4}?)*((\.)[a-zA-Z]{2,4}?))$']}
+                        errorMessages={[
+                          "This field is required",
                           "Email is not valid",
-                        ] : [
-                            "This field is required",
-                            "Email is not valid",
-                          ]}
+                        ]}
                         onChange={(e) => {
                           this.setState({ childemail: e.target.value });
                         }}
@@ -2186,8 +2187,9 @@ class GrandParentageOther extends React.Component {
                         type="text"
                         value={this.state.childFirstName}
                         placeholder="First Name"
-                        validators={["required"]}
-                        errorMessages={["This field is required"]}
+                        validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                                errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                                maxLength="30"  
                         onChange={(e) => {
                           let value = e.target.value;
                           value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -2226,8 +2228,9 @@ class GrandParentageOther extends React.Component {
                         type="text"
                         value={this.state.childLastName}
                         placeholder="Last Name"
-                        validators={["required"]}
-                        errorMessages={["This field is required"]}
+                        validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                                errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                                maxLength="30"  
                         onChange={(e) => {
                           let value = e.target.value;
                           value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -2448,8 +2451,9 @@ class GrandParentageOther extends React.Component {
                           type="text"
                           value={this.state.ap[idx].firstName}
                           placeholder="First Name"
-                          validators={["required"]}
-                          errorMessages={["This field is required"]}
+                          validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                                errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                                maxLength="30"  
                           data-id={idx}
                           onChange={(e) => {
                             let ap = [...this.state.ap];
@@ -2492,8 +2496,9 @@ class GrandParentageOther extends React.Component {
                           type="text"
                           value={this.state.ap[idx].lastName}
                           placeholder="Last Name"
-                          validators={["required"]}
-                          errorMessages={["This field is required"]}
+                          validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                          errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                          maxLength="30"  
                           data-id={idx}
                           onChange={(e) => {
                             let ap = [...this.state.ap];
@@ -2607,13 +2612,11 @@ class GrandParentageOther extends React.Component {
                           type="email"
                           placeholder="Email"
                           value={this.state.ap[idx].email}
-                          validators={this.state.ap[idx].pickupPreference ? ["isEmail"] : ["required", "isEmail"]}
-                          errorMessages={this.state.ap[idx].pickupPreference ? [
+                          validators={["required" , 'matchRegexp:^([a-zA-Z0-9])(([a-zA-Z0-9])*([\._\+-])*([a-zA-Z0-9]))*@([a-zA-Z0-9])*.(([a-zA-Z]{2,4}?)*((\.)[a-zA-Z]{2,4}?))$']}
+                          errorMessages={[
+                            "This field is required",
                             "Email is not valid",
-                          ] : [
-                              "This field is required",
-                              "Email is not valid",
-                            ]}
+                          ]}
                           data-id={idx}
                           onChange={(e) => {
                             let ap = [...this.state.ap];

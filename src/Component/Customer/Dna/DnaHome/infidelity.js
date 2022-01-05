@@ -210,8 +210,9 @@ class InfidelityOther extends React.Component {
                       type="text"
                       value={this.state.name}
                       placeholder="Name"
-                      validators={["required"]}
-                      errorMessages={this.state.inputError}
+                      validators={["required","trim"]}
+                      maxlength="30"
+                      errorMessages={"This field is required","Please Enter valid name"}
                       onChange={(e) => {
                         let value = e.target.value;
                         value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -250,7 +251,7 @@ class InfidelityOther extends React.Component {
                       autoComplete="off"
                       placeholder="Email"
                       value={this.state.email}
-                      validators={["required", "isEmail"]}
+                      validators={["required" , 'matchRegexp:^([a-zA-Z0-9])(([a-zA-Z0-9])*([\._\+-])*([a-zA-Z0-9]))*@([a-zA-Z0-9])*.(([a-zA-Z]{2,4}?)*((\.)[a-zA-Z]{2,4}?))$']}
                       errorMessages={[
                         "This field is required",
                         "Email is not valid",
@@ -399,8 +400,9 @@ class InfidelityOther extends React.Component {
                       type="text"
                       value={this.state.relationFirstName}
                       placeholder="First Name"
-                      validators={["required"]}
-                      errorMessages={["This field is required"]}
+                      validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                      errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                      maxLength="30"  
                       onChange={(e) => {
                         let value = e.target.value;
                         value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -439,8 +441,9 @@ class InfidelityOther extends React.Component {
                       type="text"
                       value={this.state.relationLastName}
                       placeholder="Last Name"
-                      validators={["required"]}
-                      errorMessages={["This field is required"]}
+                      validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                      errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                      maxLength="30"  
                       onChange={(e) => {
                         let value = e.target.value;
                         value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -545,16 +548,11 @@ class InfidelityOther extends React.Component {
                       type="email"
                       placeholder="Email"
                       value={this.state.relationEmail}
-                      validators={
-                        this.state.relationEmailMe
-                          ? ["isEmail"]
-                          : ["required", "isEmail"]
-                      }
-                      errorMessages={
-                        this.state.relationEmailMe
-                          ? ["Email is not valid"]
-                          : ["This field is required", "Email is not valid"]
-                      }
+                      validators={["required" , 'matchRegexp:^([a-zA-Z0-9])(([a-zA-Z0-9])*([\._\+-])*([a-zA-Z0-9]))*@([a-zA-Z0-9])*.(([a-zA-Z]{2,4}?)*((\.)[a-zA-Z]{2,4}?))$']}
+                      errorMessages={[
+                        "This field is required",
+                        "Email is not valid",
+                      ]}
                       onChange={(e) => {
                         this.setState({ relationEmail: e.target.value });
                       }}
@@ -738,8 +736,8 @@ class InfidelityOther extends React.Component {
                       type="text"
                       value={this.state.testedname}
                       placeholder="Item Name"
-                      validators={["required"]}
-                      errorMessages={["This field is required"]}
+                      validators={["required","trim"]}
+                      errorMessages={["This field is required","Can not be Empty"]}
                       onChange={(e) => {
                         this.setState({
                           testedname: e.target.value,
@@ -1083,6 +1081,12 @@ class InfidelityOther extends React.Component {
                           <input
                             type="text"
                             placeholder="Enter Other"
+                            value={this.state.email}
+                      validators={["required","trim"]}
+                      errorMessages={[
+                        "This field is required",
+                        "Please Enter valid value",
+                      ]}
                             value={this.state.otherTest}
                             onChange={(e) => {
                               this.setState({ otherTest: e.target.value });

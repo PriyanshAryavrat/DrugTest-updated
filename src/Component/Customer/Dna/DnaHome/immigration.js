@@ -190,8 +190,9 @@ class ImmigrationOther extends React.Component {
                       type="text"
                       value={this.state.firstName}
                       placeholder="First Name"
-                      validators={["required"]}
-                      errorMessages={this.state.inputError}
+                            validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                                errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                                maxLength="30"  
                       onChange={(e) => {
                         let value = e.target.value;
                         value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -228,8 +229,9 @@ class ImmigrationOther extends React.Component {
                       type="text"
                       value={this.state.lastName}
                       placeholder="First Name"
-                      validators={["required"]}
-                      errorMessages={this.state.inputError}
+                      validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                      errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                      maxLength="30"  
                       onChange={(e) => {
                         let value = e.target.value;
                         value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -309,7 +311,9 @@ class ImmigrationOther extends React.Component {
                       type="text"
                       value={this.state.passport}
                       placeholder="Passport Number"
-                      errorMessages={this.state.inputError}
+                      validators={["required" , "matchRegexp:^[0-9a-zA-Z]+$"]}
+                      errorMessages={["This field is required" , "Please Enter Valid Passport Number"]}
+                      maxLength="20"  
                       onChange={(e) => {
                         let value = e.target.value;
                         // value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -380,7 +384,7 @@ class ImmigrationOther extends React.Component {
                       type="email"
                       placeholder="Email"
                       value={this.state.email}
-                      validators={["required", "isEmail"]}
+                      validators={["required" , 'matchRegexp:^([a-zA-Z0-9])(([a-zA-Z0-9])*([\._\+-])*([a-zA-Z0-9]))*@([a-zA-Z0-9])*.(([a-zA-Z]{2,4}?)*((\.)[a-zA-Z]{2,4}?))$']}
                       errorMessages={[
                         "This field is required",
                         "Email is not valid",
@@ -400,8 +404,9 @@ class ImmigrationOther extends React.Component {
                       type="text"
                       value={this.state.drivingLicence}
                       placeholder="DL Number"
-                      validators={this.state.hasDl ? [] : ["required"]}
-                      errorMessages={["This field is required"]}
+                      maxlength="30"
+                      validators={["required","trim"]}
+                      errorMessages={["This field is required","Please Enter valid DL Number"]}
                       onChange={(e) => {
                         this.setState({
                           drivingLicence: e.target.value,
@@ -738,8 +743,9 @@ class ImmigrationOther extends React.Component {
                       type="text"
                       value={this.state.Beneficiaryfirstname}
                       placeholder="First Name"
-                      validators={["required"]}
-                      errorMessages={this.state.inputError}
+                      validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                      errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                      maxLength="30"  
                       onChange={(e) => {
                         let value = e.target.value;
                         value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -776,8 +782,9 @@ class ImmigrationOther extends React.Component {
                       type="text"
                       value={this.state.BeneficiarylastName}
                       placeholder="Last Name"
-                      validators={["required"]}
-                      errorMessages={this.state.inputError}
+                      validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                      errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                      maxLength="30"  
                       onChange={(e) => {
                         let value = e.target.value;
                         value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -946,11 +953,11 @@ class ImmigrationOther extends React.Component {
                       type="email"
                       placeholder="Email"
                       value={this.state.beneficiaryemail}
-                      validators={["required", "isEmail"]}
-                      errorMessages={[
-                        "This field is required",
-                        "Email is not valid",
-                      ]}
+                      validators={["required" , 'matchRegexp:^([a-zA-Z0-9])(([a-zA-Z0-9])*([\._\+-])*([a-zA-Z0-9]))*@([a-zA-Z0-9])*.(([a-zA-Z]{2,4}?)*((\.)[a-zA-Z]{2,4}?))$']}
+                              errorMessages={[
+                                "This field is required",
+                                "Email is not valid",
+                              ]}
                       onChange={(e) => {
                         this.setState({ beneficiaryemail: e.target.value });
                       }}

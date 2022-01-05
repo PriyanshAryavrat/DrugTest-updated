@@ -264,8 +264,9 @@ class MaternityOther extends React.Component {
                       type="text"
                       value={this.state.name}
                       placeholder="Name"
-                      validators={["required"]}
-                      errorMessages={this.state.inputError}
+                      validators={["required" , "trim"]}
+                      errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                      maxLength="30"  
                       onChange={(e) => {
                         let value = e.target.value;
                         value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -304,7 +305,7 @@ class MaternityOther extends React.Component {
                       autoComplete="off"
                       placeholder="Email"
                       value={this.state.email}
-                      validators={["required", "isEmail"]}
+                      validators={["required" , 'matchRegexp:^([a-zA-Z0-9])(([a-zA-Z0-9])*([\._\+-])*([a-zA-Z0-9]))*@([a-zA-Z0-9])*.(([a-zA-Z]{2,4}?)*((\.)[a-zA-Z]{2,4}?))$']}
                       errorMessages={[
                         "This field is required",
                         "Email is not valid",
@@ -465,8 +466,9 @@ class MaternityOther extends React.Component {
                       type="text"
                       value={this.state.motherFirstName}
                       placeholder="First Name"
-                      validators={["required"]}
-                      errorMessages={["This field is required"]}
+                      validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                                errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                                maxLength="30"  
                       onChange={(e) => {
                         let value = e.target.value;
                         value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -505,8 +507,9 @@ class MaternityOther extends React.Component {
                       type="text"
                       value={this.state.motherLastName}
                       placeholder="Last Name"
-                      validators={["required"]}
-                      errorMessages={["This field is required"]}
+                      validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                      errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                      maxLength="30"  
                       onChange={(e) => {
                         let value = e.target.value;
                         value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -597,13 +600,11 @@ class MaternityOther extends React.Component {
                       type="email"
                       placeholder="Email"
                       value={this.state.motheremail}
-                      validators={this.state.motherEmailme ? ["isEmail"] : ["required", "isEmail"]}
-                      errorMessages={this.state.motherEmailme ? [
+                      validators={["required" , 'matchRegexp:^([a-zA-Z0-9])(([a-zA-Z0-9])*([\._\+-])*([a-zA-Z0-9]))*@([a-zA-Z0-9])*.(([a-zA-Z]{2,4}?)*((\.)[a-zA-Z]{2,4}?))$']}
+                      errorMessages={[
+                        "This field is required",
                         "Email is not valid",
-                      ] : [
-                          "This field is required",
-                          "Email is not valid",
-                        ]}
+                      ]}
                       onChange={(e) => {
                         this.setState({ motheremail: e.target.value });
                       }}
@@ -852,8 +853,9 @@ class MaternityOther extends React.Component {
                         type="text"
                         value={this.state.childFirstName}
                         placeholder="Name"
-                        validators={["required"]}
-                        errorMessages={["This field is required"]}
+                        validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                        errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                        maxLength="30"  
                         onChange={(e) => {
                           let value = e.target.value;
                           value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -892,8 +894,9 @@ class MaternityOther extends React.Component {
                         type="text"
                         value={this.state.childLastName}
                         placeholder="Last Name"
-                        validators={["required"]}
-                        errorMessages={["This field is required"]}
+                        validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                        errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                        maxLength="30"  
                         onChange={(e) => {
                           let value = e.target.value;
                           value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -1242,8 +1245,9 @@ class MaternityOther extends React.Component {
                         type="text"
                         value={this.state.childFirstName}
                         placeholder="First Name"
-                        validators={["required"]}
-                        errorMessages={["This field is required"]}
+                        validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                        errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                        maxLength="30"  
                         onChange={(e) => {
                           let value = e.target.value;
                           value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -1282,8 +1286,9 @@ class MaternityOther extends React.Component {
                         type="text"
                         value={this.state.childLastName}
                         placeholder="Last Name"
-                        validators={["required"]}
-                        errorMessages={["This field is required"]}
+                        validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                                errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                                maxLength="30"  
                         onChange={(e) => {
                           let value = e.target.value;
                           value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -1501,8 +1506,9 @@ class MaternityOther extends React.Component {
                           type="text"
                           value={this.state.ap[idx].firstName}
                           placeholder="First Name"
-                          validators={["required"]}
-                          errorMessages={["This field is required"]}
+                          validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                          errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                          maxLength="30"  
                           data-id={idx}
                           onChange={(e) => {
                             let ap = [...this.state.ap];
@@ -1545,8 +1551,9 @@ class MaternityOther extends React.Component {
                           type="text"
                           value={this.state.ap[idx].lastName}
                           placeholder="Last Name"
-                          validators={["required"]}
-                          errorMessages={["This field is required"]}
+                          validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                          errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                          maxLength="30"  
                           data-id={idx}
                           onChange={(e) => {
                             let ap = [...this.state.ap];

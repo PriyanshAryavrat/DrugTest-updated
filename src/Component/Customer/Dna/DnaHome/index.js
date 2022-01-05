@@ -20,7 +20,7 @@ import InfidelityOther from "./infidelity";
 import PassportOther from "./passport";
 import axios from "axios";
 import apiPath from "../../../../Environment/ApiPath";
-import {NotificationContainer, NotificationManager} from 'react-notifications';
+import { NotificationContainer, NotificationManager } from 'react-notifications';
 var array = [];
 const Toast = Swal.mixin({
   toast: true,
@@ -53,7 +53,7 @@ class DnaHome extends React.Component {
       relationdateRead: false,
       inputRead: true,
       mother: false,
-      anonymous:false,
+      anonymous: false,
       child: false,
       additionalPerson: false,
       phoneNo: "",
@@ -78,27 +78,27 @@ class DnaHome extends React.Component {
       childCallme: false,
       childEmailme: false,
       childdateRead: false,
-      disabled:false,
-      anonymousFirstName:"",
-      anonymousLastName:"",
-      anonymousMiddleName:"",
-      anonymousDateofbirth:"",
-      anonymousSex:"",
-      anonymousPassword:"",
-      anonymousSampleType:"",
-      anonymousSampleTypeOther:"",
-      anonymousRaceEthnicity:"",
-      anonymousRaceEthnicityOther:"",
-      anonymousEmailme:"",
-      anonymousCallme:"",
-      anonymousisDl:"",
-      anonymousPhoneNo:"",
-      anonymousEmail:"",
-      anonymousDrivingLicence:"",
-      anonymousDlState:"California",
-      anonymousCallme:false,
-      anonymousEmailme:false,
-      anonymousDateRead:false,
+      disabled: false,
+      anonymousFirstName: "",
+      anonymousLastName: "",
+      anonymousMiddleName: "",
+      anonymousDateofbirth: "",
+      anonymousSex: "",
+      anonymousPassword: "",
+      anonymousSampleType: "",
+      anonymousSampleTypeOther: "",
+      anonymousRaceEthnicity: "",
+      anonymousRaceEthnicityOther: "",
+      anonymousEmailme: "",
+      anonymousCallme: "",
+      anonymousisDl: "",
+      anonymousPhoneNo: "",
+      anonymousEmail: "",
+      anonymousDrivingLicence: "",
+      anonymousDlState: "California",
+      anonymousCallme: false,
+      anonymousEmailme: false,
+      anonymousDateRead: false,
       // anonymousDateRead:false,
     };
   }
@@ -146,9 +146,9 @@ class DnaHome extends React.Component {
     debugger
     // evt.preventDefault();
     if (this.state.disabled) {
-        return;
+      return;
     }
-    this.setState({disabled: true});
+    this.setState({ disabled: true });
     console.log("form submitted");
     let formData = {
       name: this.state.name,
@@ -257,17 +257,17 @@ class DnaHome extends React.Component {
         },
       })
       .then((res) => {
-        this.setState({disabled: false});
+        this.setState({ disabled: false });
         if (res.data && res.data.status === "failure") {
-          NotificationManager.error(res.data.message,"Error",2000);
-          this.setState({disabled: false});
+          NotificationManager.error(res.data.message, "Error", 2000);
+          this.setState({ disabled: false });
           return;
         }
-        NotificationManager.success("Data saved successfully!","Success",2000);
+        NotificationManager.success("Data saved successfully!", "Success", 2000);
 
         setTimeout(() => {
           this.setState({ redirectTo: "/pdf/Paternity/" + res.data.data.formId });
-          this.setState({disabled: false});
+          this.setState({ disabled: false });
         }, 2000);
       });
   };
@@ -345,8 +345,9 @@ class DnaHome extends React.Component {
                               type="text"
                               value={this.state.name}
                               placeholder="Name"
-                              validators={["required"]}
-                              errorMessages={this.state.inputError}
+                              validators={["required","trim"]}
+                              errorMessages={["This field is required","Please Enter Valid Name"]}
+                              maxLength="30"
                               onChange={(e) => {
                                 let value = e.target.value;
                                 value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -386,7 +387,7 @@ class DnaHome extends React.Component {
                               autoComplete="off"
                               placeholder="Email"
                               value={this.state.email}
-                              validators={["required", "isEmail"]}
+                              validators={["required" , 'matchRegexp:^([a-zA-Z0-9])(([a-zA-Z0-9])*([\._\+-])*([a-zA-Z0-9]))*@([a-zA-Z0-9])*.(([a-zA-Z]{2,4}?)*((\.)[a-zA-Z]{2,4}?))$']}
                               errorMessages={[
                                 "This field is required",
                                 "Email is not valid",
@@ -409,8 +410,8 @@ class DnaHome extends React.Component {
                               type="text"
                               value={this.state.drivingLicence}
                               placeholder="DL Number"
-                              validators={["required"]}
-                              errorMessages={["This field is required"]}
+                              validators={["required","trim"]}
+                              errorMessages={["This field is required","Please Enter valid DL Number"]}
                               onChange={(e) => {
                                 this.setState({
                                   drivingLicence: e.target.value,
@@ -579,7 +580,7 @@ class DnaHome extends React.Component {
                                 </div>
                               </div>
                             </Col>
-                            
+
                           </Row>
                         </Col>
                       </Row>
@@ -598,8 +599,9 @@ class DnaHome extends React.Component {
                                 type="text"
                                 value={this.state.fatherFirstName}
                                 placeholder="First Name"
-                                validators={["required"]}
-                                errorMessages={["This field is required"]}
+                                validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                                errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                                maxLength="30"  
                                 onChange={(e) => {
                                   let value = e.target.value;
                                   value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -640,8 +642,9 @@ class DnaHome extends React.Component {
                                 type="text"
                                 value={this.state.fatherLastName}
                                 placeholder="Last Name"
-                                validators={["required"]}
-                                errorMessages={["This field is required"]}
+                                validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                                errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                                maxLength="30"  
                                 onChange={(e) => {
                                   let value = e.target.value;
                                   value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -738,13 +741,11 @@ class DnaHome extends React.Component {
                                 type="email"
                                 placeholder="Email"
                                 value={this.state.fatheremail}
-                                validators={this.state.fatherEmailme ? ["isEmail"] : ["required", "isEmail"]}
-                                errorMessages={this.state.fatherEmailme ? [
+                                validators={["required" , 'matchRegexp:^([a-zA-Z0-9])(([a-zA-Z0-9])*([\._\+-])*([a-zA-Z0-9]))*@([a-zA-Z0-9])*.(([a-zA-Z]{2,4}?)*((\.)[a-zA-Z]{2,4}?))$']}
+                                errorMessages={[
+                                  "This field is required",
                                   "Email is not valid",
-                                ] : [
-                                    "This field is required",
-                                    "Email is not valid",
-                                  ]}
+                                ]}
                                 onChange={(e) => {
                                   this.setState({
                                     fatheremail: e.target.value,
@@ -769,8 +770,7 @@ class DnaHome extends React.Component {
                                 onChange={(e) => {
                                   const re = /^[0-9\b]+$/;
                                   if (
-                                    e.target.value === "" ||
-                                    re.test(e.target.value)
+                                    e.target.value === "" ||  re.test(e.target.value)
                                   ) {
                                     this.setState({ password: e.target.value });
                                   }
@@ -786,8 +786,9 @@ class DnaHome extends React.Component {
                                 type="text"
                                 value={this.state.fatherdrivingLicence}
                                 placeholder="DL Number"
-                                validators={this.state.fatherdateRead ? [] : ["required"]}
-                                errorMessages={["This field is required"]}
+                                maxlength="30"
+                                validators={["required","trim"]}
+                                errorMessages={["This field is required","Please Enter valid DL Number"]}
                                 onChange={(e) => {
                                   this.setState({
                                     fatherdrivingLicence: e.target.value,
@@ -1151,9 +1152,9 @@ class DnaHome extends React.Component {
                                 errorMessages={this.state.motherEmailme ? [
                                   "Email is not valid",
                                 ] : [
-                                    "This field is required",
-                                    "Email is not valid",
-                                  ]}
+                                  "This field is required",
+                                  "Email is not valid",
+                                ]}
                                 onChange={(e) => {
                                   this.setState({
                                     motheremail: e.target.value,
@@ -1558,9 +1559,9 @@ class DnaHome extends React.Component {
                                 errorMessages={this.state.childEmailme ? [
                                   "Email is not valid",
                                 ] : [
-                                    "This field is required",
-                                    "Email is not valid",
-                                  ]}
+                                  "This field is required",
+                                  "Email is not valid",
+                                ]}
                                 onChange={(e) => {
                                   this.setState({ childemail: e.target.value });
                                 }}
@@ -2116,7 +2117,7 @@ class DnaHome extends React.Component {
                                 showMonthDropdown
                                 showYearDropdown
                                 dropdownMode="select"
-                                // errorMessages={["This field is required"]}
+                              // errorMessages={["This field is required"]}
                               />
                               <TextValidator
                                 name="enddate"
@@ -2126,8 +2127,8 @@ class DnaHome extends React.Component {
                                 style={{ opacity: 0, height: 0, padding: 0 }}
                                 value={this.state.anonymousDateofbirth}
                                 readOnly
-                                // validators={["required"]}
-                                // errorMessages={["This field is required"]}
+                              // validators={["required"]}
+                              // errorMessages={["This field is required"]}
                               />
                             </div>
                           </Col>
@@ -2667,9 +2668,9 @@ class DnaHome extends React.Component {
                                   errorMessages={this.state.ap[idx].pickupPreference ? [
                                     "Email is not valid",
                                   ] : [
-                                      "This field is required",
-                                      "Email is not valid",
-                                    ]}
+                                    "This field is required",
+                                    "Email is not valid",
+                                  ]}
                                   data-id={idx}
                                   onChange={(e) => {
                                     let ap = [...this.state.ap];
@@ -2869,35 +2870,35 @@ class DnaHome extends React.Component {
                             </Col>
                             {this.state.ap[idx].race ===
                               "Other" ? (
-                                <Col lg={4} md={4} sm={4}>
-                                  <div className="form-group formbox">
-                                    <label>
-                                      {" "}
+                              <Col lg={4} md={4} sm={4}>
+                                <div className="form-group formbox">
+                                  <label>
+                                    {" "}
                                     Race/Ethnicity
                                     <sup className="redstarText">*</sup>
-                                    </label>
-                                    <TextValidator
-                                      validators={["required"]}
-                                      errorMessages={["This field is required"]}
-                                      type="text"
-                                      name="raceOther"
-                                      value={
-                                        this.state.ap[idx].raceOther
-                                      }
-                                      data-id={idx}
-                                      onChange={(e) => {
-                                        let ap = [...this.state.ap];
-                                        ap[e.target.dataset.id][e.target.name] =
-                                          e.target.value;
-                                        this.setState({
-                                          ap,
-                                        });
-                                      }}
-                                      placeholder="Enter Other"
-                                    />
-                                  </div>
-                                </Col>
-                              ) : null}
+                                  </label>
+                                  <TextValidator
+                                    validators={["required"]}
+                                    errorMessages={["This field is required"]}
+                                    type="text"
+                                    name="raceOther"
+                                    value={
+                                      this.state.ap[idx].raceOther
+                                    }
+                                    data-id={idx}
+                                    onChange={(e) => {
+                                      let ap = [...this.state.ap];
+                                      ap[e.target.dataset.id][e.target.name] =
+                                        e.target.value;
+                                      this.setState({
+                                        ap,
+                                      });
+                                    }}
+                                    placeholder="Enter Other"
+                                  />
+                                </div>
+                              </Col>
+                            ) : null}
                           </Row>
                           <Row>
                             <Col lg={4} md={12} sm={12}>
@@ -3173,7 +3174,7 @@ class DnaHome extends React.Component {
               </Tab>
             </Tabs>
           </Container>
-          <NotificationContainer/>
+          <NotificationContainer />
         </div>
       </React.Fragment>
     );

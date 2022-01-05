@@ -18,9 +18,7 @@ import PhoneValidator from "../../../Form/PhoneValidator/Index";
 import {NotificationContainer, NotificationManager} from 'react-notifications';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import {
-  Eraser
-} from '../../../../src/assets/images';
+import {Eraser} from '../../../../src/assets/images';
 
 
 const Toast = Swal.mixin({
@@ -491,8 +489,9 @@ class DotOwnerEnrollment extends React.Component {
                               type="text"
                               value={this.state.companyName}
                               placeholder="Company Name"
-                              validators={["required"]}
-                              errorMessages={["This field is required"]}
+                              validators={["required","trim"]}
+                              errorMessages={["This field is required","Can not be empty"]}
+                              maxlength="30"
                               onChange={(e) => {
                                 this.setState({
                                   companyName: e.target.value,
@@ -573,8 +572,9 @@ class DotOwnerEnrollment extends React.Component {
                               type="text"
                               value={this.state.ownerName}
                               placeholder="Owner/Supervisor Name"
-                              validators={["required"]}
-                              errorMessages={["This field is required"]}
+                              validators={["required","trim"]}
+                              maxLength="20"
+                              errorMessages={["This field is required","Can not be empty"]}
                               onChange={(e) => {
                                 this.setState({ ownerName: e.target.value });
                               }}
@@ -602,7 +602,7 @@ class DotOwnerEnrollment extends React.Component {
                               type="email"
                               placeholder="Owner/Supervisor Email"
                               value={this.state.ownerEmail}
-                              validators={["required", "isEmail"]}
+                              validators={["required" , 'matchRegexp:^([a-zA-Z0-9])(([a-zA-Z0-9])*([\._\+-])*([a-zA-Z0-9]))*@([a-zA-Z0-9])*.(([a-zA-Z]{2,4}?)*((\.)[a-zA-Z]{2,4}?))$']}
                               errorMessages={[
                                 "This field is required",
                                 "Email is not valid",
@@ -636,8 +636,9 @@ class DotOwnerEnrollment extends React.Component {
                               type="text"
                               value={this.state.companyAddress}
                               placeholder="Address"
-                              validators={["required"]}
-                              errorMessages={["This field is required"]}
+                              validators={["required" , "trim"]}
+                              maxlength="30"
+                              errorMessages={["This field is required","can not be empty"]}
                               onChange={(e) => {
                                 this.setState({
                                   companyAddress: e.target.value,
@@ -655,8 +656,9 @@ class DotOwnerEnrollment extends React.Component {
                               type="text"
                               value={this.state.ownerCity}
                               placeholder="City"
-                              validators={["required"]}
-                              errorMessages={["This field is required"]}
+                              validators={["required" , "trim"]}
+                              maxlength="20"
+                              errorMessages={["This field is required","can not be emptys"]}
                               onChange={(e) => {
                                 this.setState({ ownerCity: e.target.value });
                               }}
@@ -691,8 +693,9 @@ class DotOwnerEnrollment extends React.Component {
                               type="text"
                               value={this.state.ownerZipcode}
                               placeholder="Zip Code"
-                              validators={["required"]}
-                              errorMessages={["This field is required"]}
+                              validators={["trim","required","isNumber"]}
+                              maxlength="8"
+                              errorMessages={["Can not be empty","This field is required","please enter valid zip code",]}
                               onChange={(e) => {
                                 this.setState({ ownerZipcode: e.target.value });
                               }}
@@ -730,8 +733,9 @@ class DotOwnerEnrollment extends React.Component {
                                     // value={this.state.drivers[idx].firstName}
                                     value={this.state.firstName}
                                     placeholder="First Name"
-                                    validators={["required"]}
-                                    errorMessages={["This field is required"]}
+                                    validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                                    errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                                    maxLength="30"
                                     data-id={idx}
                                     onChange={(e) => {
                                       // let drivers = [...this.state.drivers]
@@ -775,8 +779,9 @@ class DotOwnerEnrollment extends React.Component {
                                     // value={this.state.drivers[idx].lastName}
                                     value={this.state.lastName}
                                     placeholder="Last Name"
-                                    validators={["required"]}
-                                    errorMessages={["This field is required"]}
+                                    validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                                    errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                                    maxLength="30"
                                     data-id={idx}
                                     onChange={(e) => {
                                       // let drivers = [...this.state.drivers]
@@ -831,6 +836,11 @@ class DotOwnerEnrollment extends React.Component {
                                     value={this.state.email}
                                     placeholder="Email"
                                     data-id={idx}
+                                    validators={['required','matchRegexp:^([a-zA-Z0-9])(([a-zA-Z0-9])*([\._\+-])*([a-zA-Z0-9]))*@([a-zA-Z0-9])*.(([a-zA-Z]{2,4}?)*((\.)[a-zA-Z]{2,4}?))$']}
+                                    errorMessages={[
+                                    "This field is required",
+                                      "Email is not valid",
+                                    ]}
                                     // validators={["required"]}
                                     // errorMessages={["This field is required"]}
                                     onChange={(e) => {
@@ -1005,8 +1015,9 @@ class DotOwnerEnrollment extends React.Component {
                                           type="text"
                                           value={this.state.employerName}
                                           placeholder="Previous Employer Name"
-                                          validators={["required"]}
-                                          errorMessages={["This field is required"]}
+                                          validators={["required","trim"]}
+                                          maxlength="30"
+                                          errorMessages={["This field is required","Please Enter valid name"]}
                                           onChange={(e) => {
                                             this.setState({
                                               employerName: e.target.value,
@@ -1024,6 +1035,11 @@ class DotOwnerEnrollment extends React.Component {
                                           type="text"
                                           value={this.state.employerEmailAddress}
                                           placeholder="Previous Employer Email Address"
+                                          validators={['required','matchRegexp:^([a-zA-Z0-9])(([a-zA-Z0-9])*([\._\+-])*([a-zA-Z0-9]))*@([a-zA-Z0-9])*.(([a-zA-Z]{2,4}?)*((\.)[a-zA-Z]{2,4}?))$']}
+                                          errorMessages={[
+                                          "This field is required",
+                                            "Email is not valid",
+                                          ]}
                                           onChange={(e) => {
                                             this.setState({
                                               employerEmailAddress: e.target.value,
@@ -1067,8 +1083,9 @@ class DotOwnerEnrollment extends React.Component {
                                           name="prevOwnerCity"
                                           value={this.state.prevOwnerCity}
                                           placeholder="City"
-                                          validators={["required"]}
-                                          errorMessages={["This field is required"]}
+                                          validators={["required","trim"]}
+                                          errorMessages={["This field is required","can not be empty"]}
+                                          maxlength="20"
                                           onChange={(e) => {
                                             this.setState({ prevOwnerCity: e.target.value });
                                           }}

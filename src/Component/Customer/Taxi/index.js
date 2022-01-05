@@ -206,9 +206,11 @@ class Taxi extends React.Component {
                             name="firstName"
                             type="text"
                             value={this.state.firstName}
-                            placeholder="First Name"
-                            validators={["required"]}
-                            errorMessages={["This field is required"]}
+                            validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                            errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                            maxLength="30"
+
+                            errorMessages={["This field is required" , "Please Enter valid Name"]}
                             onChange={(e) => {
                               this.setState({ firstName: e.target.value });
                             }}
@@ -236,8 +238,10 @@ class Taxi extends React.Component {
                             type="text"
                             value={this.state.lastName}
                             placeholder="Last Name"
-                            validators={["required"]}
-                            errorMessages={["This field is required"]}
+                            validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                            errorMessages={["This field is required" , "Please Enter Valid Name"]}
+                            maxLength="30"
+
                             onChange={(e) => {
                               this.setState({ lastName: e.target.value });
                             }}
@@ -267,7 +271,7 @@ class Taxi extends React.Component {
                             type="email"
                             placeholder="Email"
                             value={this.state.email}
-                            validators={["required", "isEmail"]}
+                            validators={["required","matchRegexp:^([a-zA-Z0-9])(([a-zA-Z0-9])*([\._\+-])*([a-zA-Z0-9]))*@([a-zA-Z0-9])*.(([a-zA-Z]{2,4}?)*((\.)[a-zA-Z]{2,4}?))$"]}
                             errorMessages={[
                               "This field is required",
                               "Email is not valid",

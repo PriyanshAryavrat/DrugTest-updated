@@ -275,7 +275,7 @@ class CpucOwnerEnrollment extends React.Component {
           this.setState({ redirectTo: "/cpuc-pdf/" + res.data.data.formId });
           this.setState({disabled: false});
         }, 2000);
-      });             
+      }); 
   };
 
 
@@ -287,13 +287,7 @@ class CpucOwnerEnrollment extends React.Component {
 
     return (
       <React.Fragment>
-        <ValidatorForm
-          ref="form"
-          onError={(e) => {
-            this.preventDefault();
-          }}
-          onSubmit={this.handleSubmit}
-        >
+        <ValidatorForm ref="form" onError={(e) => {this.preventDefault();}}onSubmit={this.handleSubmit}>
           <InnerHeader />
           <div className="form-container">
             <Container>
@@ -321,7 +315,7 @@ class CpucOwnerEnrollment extends React.Component {
                       <Row>
                         <Col lg={4} md={4} sm={12}>
                           <div className="form-group formbox">
-                            <label className="control-label"> TCP<sup className="redstarText"></sup> </label>
+                            <label className="control-label">TCP<sup className="redstarText"></sup> </label>
                             <TextValidator
                               name="tcp"
                               type="text"
@@ -390,8 +384,9 @@ class CpucOwnerEnrollment extends React.Component {
                               type="text"
                               value={this.state.companyName}
                               placeholder="Company Name"
-                              validators={["required"]}
-                              errorMessages={["This field is required"]}
+                              validators={["required","trim"]}
+                              errorMessages={["This field is required","Can not be empty"]}
+                              maxlength="30"
                               onChange={(e) => {
                                 this.setState({
                                   companyName: e.target.value,
@@ -476,8 +471,9 @@ class CpucOwnerEnrollment extends React.Component {
                               type="text"
                               value={this.state.ownerName}
                               placeholder="Owner/Supervisor Name"
-                              validators={["required"]}
-                              errorMessages={["This field is required"]}
+                              validators={["required","trim"]}
+                              maxLength="20"
+                              errorMessages={["This field is required","Can not be empty"]}
                               onChange={(e) => {
                                 this.setState({ ownerName: e.target.value });
                               }}
@@ -630,9 +626,10 @@ class CpucOwnerEnrollment extends React.Component {
                                     // value={this.state.drivers[idx].firstName}
                                     value={this.state.firstName}
                                     placeholder="First Name"
-                                    validators={["required"]}
-                                    errorMessages={["This field is required"]}
+                                    validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                                    errorMessages={["This field is required" , "Please Enter Valid Name"]}
                                     data-id={idx}
+                                    maxLength="30"
                                     onChange={(e) => {
                                       let drivers = [...this.state.drivers]
                                       drivers[e.target.dataset.id][e.target.name] = e.target.value
@@ -675,8 +672,9 @@ class CpucOwnerEnrollment extends React.Component {
                                     // value={this.state.drivers[idx].lastName}
                                     value={this.state.lastName}
                                     placeholder="Last Name"
-                                    validators={["required"]}
-                                    errorMessages={["This field is required"]}
+                                    maxLength="30"
+                                    validators={["required" , "matchRegexp:^[a-zA-Z]+$"  ]}
+                                    errorMessages={["This field is required" , "Please Enter Valid Name"]}
                                     data-id={idx}
                                     onChange={(e) => {
                                       // let drivers = [...this.state.drivers]
@@ -731,8 +729,11 @@ class CpucOwnerEnrollment extends React.Component {
                                     value={this.state.email}
                                     placeholder="Email"
                                     data-id={idx}
-                                    validators={["required"]}
-                                    errorMessages={["This field is required"]}
+                                    validators={["required" , 'matchRegexp:^([a-zA-Z0-9])(([a-zA-Z0-9])*([\._\+-])*([a-zA-Z0-9]))*@([a-zA-Z0-9])*.(([a-zA-Z]{2,4}?)*((\.)[a-zA-Z]{2,4}?))$']}
+                                    errorMessages={[
+                                      "This field is required",
+                                      "Email is not valid",
+                                    ]}
                                     onChange={(e) => {
                                       // let drivers = [...this.state.drivers]
                                       // drivers[e.target.dataset.id][e.target.name] = e.target.value
