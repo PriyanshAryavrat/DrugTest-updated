@@ -210,6 +210,7 @@ class AddClient extends React.Component {
                               type="text"
                               className="form-control"
                               placeholder="Middle Name"
+                              maxlength="20"
                               value={this.state.middleName}
                               onChange={(e) => {
                                 this.setState({ middleName: e.target.value });

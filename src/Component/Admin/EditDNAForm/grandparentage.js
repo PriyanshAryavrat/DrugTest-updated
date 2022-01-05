@@ -727,6 +727,7 @@ class GrandParentageOther extends React.Component {
                             type="text"
                             value={this.state.grandFatherMiddleName}
                             placeholder="Middle Name"
+                            maxlength="20"
                             onChange={(e) => {
                               let value = e.target.value;
                               value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -1148,6 +1149,7 @@ class GrandParentageOther extends React.Component {
                             type="text"
                             value={this.state.grandMotherMiddleName}
                             placeholder="Middle Name"
+                            maxlength="20"
                             onChange={(e) => {
                               let value = e.target.value;
 
@@ -1553,6 +1555,7 @@ class GrandParentageOther extends React.Component {
                             type="text"
                             value={this.state.motherMiddleName}
                             placeholder="Middle Name"
+                            maxlength="20"
                             onChange={(e) => {
                               let value = e.target.value;
                               value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -1950,6 +1953,7 @@ class GrandParentageOther extends React.Component {
                             type="text"
                             value={this.state.childMiddleName}
                             placeholder="Middle Name"
+                            maxlength="20"
                             onChange={(e) => {
                               let value = e.target.value;
                               value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -2345,6 +2349,7 @@ class GrandParentageOther extends React.Component {
                             type="text"
                             value={this.state.childMiddleName}
                             placeholder="Middle Name"
+                            maxlength="20"
                             onChange={(e) => {
                               let value = e.target.value;
                               value = value.replace(/[^A-Za-z\s]/gi, "");

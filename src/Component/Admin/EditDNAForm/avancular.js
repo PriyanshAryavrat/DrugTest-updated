@@ -699,6 +699,7 @@ class AvuncularOther extends React.Component {
                             type="text"
                             value={this.state.auntMiddleName}
                             placeholder="Middle Name"
+                            maxlength="20"
                             onChange={(e) => {
                               let value = e.target.value;
                               value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -1096,6 +1097,7 @@ class AvuncularOther extends React.Component {
                             type="text"
                             value={this.state.uncleMiddleName}
                             placeholder="Middle Name"
+                            maxlength="20"
                             onChange={(e) => {
                               let value = e.target.value;
                               value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -1496,6 +1498,7 @@ class AvuncularOther extends React.Component {
                             type="text"
                             value={this.state.motherMiddleName}
                             placeholder="Middle Name"
+                            maxlength="20"
                             onChange={(e) => {
                               let value = e.target.value;
                               value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -1907,6 +1910,7 @@ class AvuncularOther extends React.Component {
                             type="text"
                             value={this.state.childMiddleName}
                             placeholder="Middle Name"
+                            maxlength="20"
                             onChange={(e) => {
                               let value = e.target.value;
                               value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -2294,6 +2298,7 @@ class AvuncularOther extends React.Component {
                             type="text"
                             value={this.state.childMiddleName}
                             placeholder="Middle Name"
+                            maxlength="20"
                             onChange={(e) => {
                               let value = e.target.value;
                               value = value.replace(/[^A-Za-z\s]/gi, "");
@@ -2555,6 +2560,7 @@ class AvuncularOther extends React.Component {
                               type="text"
                               value={this.state.ap[idx].middleName}
                               placeholder="Middle Name"
+                              maxlength="20"
                               data-id={idx}
                               onChange={(e) => {
                                 let ap = [...this.state.ap];

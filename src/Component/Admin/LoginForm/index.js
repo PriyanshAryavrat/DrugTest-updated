@@ -74,16 +74,19 @@ class Login extends React.Component {
                     <div className="form-group formbox">
                       <label>Email</label>
                       <TextValidator type="email" name="email" placeholder="Enter Your Email" value={this.state.username}
-                        validators={['required', 'isEmail']}
-                        errorMessages={['This field is required', 'Email is not valid']}
+                         validators={["required" , 'matchRegexp:^([a-zA-Z0-9])(([a-zA-Z0-9])*([\._\+-])*([a-zA-Z0-9]))*@([a-zA-Z0-9])*.(([a-zA-Z]{2,4}?)*((\.)[a-zA-Z]{2,4}?))$']}
+                         errorMessages={[
+                           "This field is required",
+                           "Email is not valid"
+                         ]}
                         onChange={(e) => { this.setState({ username: e.target.value }) }}
                       />
                     </div>
                     <div className="form-group formbox">
                       <label>Password</label>
                       <TextValidator type="password" name="password" placeholder="Password" value={this.state.password}
-                        validators={['required']}
-                        errorMessages={['This field is required']}
+                        validators={['required','trim']}
+                        errorMessages={['This field is required','Please Enter valid Password']}
                         onChange={(e) => { this.setState({ password: e.target.value }) }}
                       />
                     </div>
